@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn React</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    Hi 
+    <div id="root">
+        <h1>Welcome In React : This content will replaced by JS content.</h1> <!--You can see if you refresh website fastly-->
+    </div>
+
+<!-- 
+    Q What is React CDN?
+    Answer => React CDN means loading React library directly from a Content Delivery Network using script tags
+        instead of installing it locally via npm. It is mainly used for quick demos and small projects.
+
+    Q What is crossorigin?
+    Answer => crossorigin is an HTML attribute used when loading resources (JS, CSS, images, fonts) from another domain.
+-->
+    <!-- Here scripts order matters -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="./App.js"></script>
 </body>
 </html>
