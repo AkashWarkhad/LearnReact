@@ -1,1 +1,18 @@
-/node_modules
+# dependencies
+node_modules/
+
+# production build
+dist/
+
+# parcel cache
+.parcel-cache/
+
+# environment variables
+.env
+
+# logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
