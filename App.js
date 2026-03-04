@@ -6,7 +6,7 @@ console.log("###### 1.1 Create a Hello World using React ######");
 const heading = React.createElement(
     "h1",                                       // HTML Tag to be created
     { id: "heading", className: "headClass" },  // Attributes/props for the element
-    "#### Learn React! ####"                // Inner text / children
+    "#### Learn React! ####"                // Children / Inner Content
 );
 
 // React element is just a JavaScript object (not actual HTML yet)
@@ -57,5 +57,5 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // root.render()
 // Converts React elements (JavaScript objects) into real DOM elements
-// and inserts them into the browser DOM
+// and inserts/replace(Existing content from HTML) them into the browser DOM
 root.render(container);
