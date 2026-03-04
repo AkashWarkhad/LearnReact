@@ -1,0 +1,30 @@
+{
+  "name": "learnreact",
+  "version": "1.0.0",
+  "description": "This app is used to learn the react concepts.",
+  "keywords": [
+    "LearnReact",
+    "React18"
+  ],
+  "homepage": "https://github.com/AkashWarkhad/LearnReact#readme",
+  "bugs": {
+    "url": "https://github.com/AkashWarkhad/LearnReact/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkashWarkhad/LearnReact.git"
+  },
+  "license": "ISC",
+  "author": "Akash Warkhad",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}

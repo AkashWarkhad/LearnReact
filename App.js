@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client"
+
 console.log("###### 1.1 Create a Hello World using React ######");
 
 // React.createElement()
@@ -6,7 +9,7 @@ console.log("###### 1.1 Create a Hello World using React ######");
 const heading = React.createElement(
     "h1",                                       // HTML Tag to be created
     { id: "heading", className: "headClass" },  // Attributes/props for the element
-    "#### Learn React! ####"                // Children / Inner Content
+    "#### Learn React 19! ####"                 // Children / Inner Content
 );
 
 // React element is just a JavaScript object (not actual HTML yet)
