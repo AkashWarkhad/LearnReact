@@ -44,6 +44,28 @@ This repository will include implementations and practice examples for the follo
 - Creating elements using `React.createElement`
 - Rendering elements using `ReactDOM.createRoot`
 
+### Parcel
+- Dev Build
+- Local Server
+- HMR (Hot Module Replacement)
+- File Watching Algorithm - Written in C++
+- Caching - Faster builds
+- Image Optimization
+- Minification
+- Bundling
+- Compressing
+- Consitent Hashing
+- Code spliting
+- Differential Bundelling -(Support for older browser version)
+- Diagonstic 
+- Error Handling
+- HTTPs
+- Tree Shaking - Remove unused code.
+- Different Bundles for Dev & Prod
+
+
+
+
 ### JSX
 - Introduction to JSX
 - JSX vs `React.createElement`
@@ -69,6 +91,14 @@ This repository will include implementations and practice examples for the follo
 - Virtual DOM
 - React reconciliation
 - Rendering process in React
+
+### Links
+- React: https://react.dev/learn
+- npm: https://www.npmjs.com/
+- Parcel: https://parceljs.org/
+- Browserslist: https://browsersl.ist/
+- BrowserslistDev: https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
+
 
 ---
 
