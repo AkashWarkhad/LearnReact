@@ -98,6 +98,7 @@ This repository will include implementations and practice examples for the follo
 - Parcel: https://parceljs.org/
 - Browserslist: https://browsersl.ist/
 - BrowserslistDev: https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
+- Bable: https://babeljs.io/
 
 
 ---
@@ -108,3 +109,16 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/AkashWarkhad/LearnReact.git
+```
+
+To Run the Project on Local/Dev:
+
+```bash
+npm start
+```
+
+To Run the Project on Production:
+
+```bash
+npm run build
+```

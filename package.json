@@ -18,6 +18,8 @@
   "author": "Akash Warkhad",
   "type": "commonjs",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "devDependencies": {
@@ -30,6 +32,5 @@
   "browserslist":
   [
     "last 2 versions"
-
   ]
 }
