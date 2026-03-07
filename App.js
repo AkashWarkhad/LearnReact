@@ -72,13 +72,17 @@ console.log("######## React Functional Components :");
 // Arrow Function
 const FuncHeading = () => <h4>## React Functional Component :-</h4>;
 
+const question = "What is a Functional Component in React? :- ";
 const FunctionalComponent = () => 
 {
     return (
-        <p>
-            What is a Functional Component in React? :- A functional component in React is a JavaScript function that returns JSX and represents
-            a reusable UI element. Functional components are simple, easy to maintain, and support React Hooks for managing state and side effects.
-        </p>
+        <div>
+            <p>
+                <b>{question}</b>
+                A functional component in React is a JavaScript function that returns JSX and represents
+                a reusable UI element. Functional components are simple, easy to maintain, and support React Hooks for managing state and side effects.
+            </p>
+        </div>
     );
 }
 
@@ -88,6 +92,7 @@ function NormalFunctionSyntax()
     return(<hr></hr>);
 }
 
+console.log("#FuncHeading:-",FuncHeading);
 
 const allJsxComponents = 
 (
@@ -96,10 +101,10 @@ const allJsxComponents =
         {jsxHeading}
         {jsxInfo}
 
-        {/* Two ways to use a functional component: as a JSX element and by calling the function directly */}
+        {/* Three ways to execute/call a functional component: as a JSX element and by calling the function directly */}
         <FuncHeading/>     
         {FunctionalComponent()}
-        <NormalFunctionSyntax />
+        <NormalFunctionSyntax></NormalFunctionSyntax>
         
     </div>
 );
