@@ -1,5 +1,11 @@
 #heading
 {
-    color: green;
+    color: blue;
+    text-align: center;
+}
+
+#jsxHeading 
+{
+    color: red;
     text-align: center;
 }

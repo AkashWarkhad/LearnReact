@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
 
+
+// ################## 1.1 Create a Hello World using React ##################
 console.log("###### 1.1 Create a Hello World using React ######");
 
 // React.createElement()
 // Used to create a React Element (a JavaScript object representation of HTML)
 
+//Flow:  React.createElement => ReactElement-JS Object => HTML Element => Render
 const heading = React.createElement(
     "h1",                                       // HTML Tag to be created
     { id: "heading", className: "headClass" },  // Attributes/props for the element
@@ -34,8 +37,8 @@ const outer = React.createElement(
         { id: "child" },
         [
             // When multiple elements are inside an array, React requires a unique "key"
-            React.createElement("h3", { key: "child-h3" }, "h3 tag inside nested tags."),
-            React.createElement("h4", { key: "child-h4" }, "h4 tag inside nested tags.")
+            React.createElement("p", { key: "p-1" }, "What is React? :- React is an open-source JavaScript library used to build fast, interactive, and reusable user interfaces using a component-based architecture."),
+            React.createElement("p", { key: "p-2" }, "Why Do We Use React? :- React is an open-source JavaScript library developed by Facebook for building fast and interactive user interfaces using reusable components and a Virtual DOM for efficient rendering.")
         ]
     )
 );
@@ -43,14 +46,77 @@ const outer = React.createElement(
 // React element is just a JavaScript object (not actual HTML yet)
 console.log("Created Nested React Element:", outer);
 
+
+// ################## 2.1 JSX (JavaScript XML) ##################
+console.log("###### 2.1 JSX (JavaScript XML) ######");
+
+//Flow: JSX =>(Babel transpiled) React.createElement [ => ReactElement-JS Object => HTML Element => Render]
+var jsxHeading = <h1 id="jsxHeading" className="jsxClass">JSX(JavaScript XML)</h1>;
+var jsxInfo = 
+(
+    <p> 
+        What is JSX? :- JSX is a syntax extension for JavaScript used in React that
+        allows developers to write HTML-like code inside JavaScript. JSX is compiled by Babel 
+        into React.createElement() calls that create React elements.
+        Babel is responsible for transpiled the JSX code into react code & then rendering happens.
+    </p>
+);
+
+console.log("JSX Heading: ", jsxHeading);
+
+// ################## 2.2 React Components ##################
+console.log("################## 2.2 React Components ##################");
+
+console.log("######## React Functional Components :");
+
+// Arrow Function
+const FuncHeading = () => <h4>## React Functional Component :-</h4>;
+
+const question = "What is a Functional Component in React? :- ";
+const FunctionalComponent = () => 
+{
+    return (
+        <div>
+            <p>
+                <b>{question}</b>
+                A functional component in React is a JavaScript function that returns JSX and represents
+                a reusable UI element. Functional components are simple, easy to maintain, and support React Hooks for managing state and side effects.
+            </p>
+        </div>
+    );
+}
+
+// Older/Normal Function
+function NormalFunctionSyntax()
+{
+    return(<hr></hr>);
+}
+
+console.log("#FuncHeading:-",FuncHeading);
+
+const allJsxComponents = 
+(
+    <div id="jsxContainer">
+        {/** Component compostion : Component Composition is the process of combining smaller React components together to create a larger and more complex UI component.*/}
+        {jsxHeading}
+        {jsxInfo}
+
+        {/* Three ways to execute/call a functional component: as a JSX element and by calling the function directly */}
+        <FuncHeading/>     
+        {FunctionalComponent()}
+        <NormalFunctionSyntax></NormalFunctionSyntax>
+        
+    </div>
+);
+
 // Combining multiple React elements into one container
 // React requires a single root element to render
-
 const container = React.createElement(
     "div",
     { id: "container" },   // Main wrapper element
     heading,               // First child element
-    outer                  // Second child element
+    outer,                  // Second child element
+    allJsxComponents
 );
 
 // ReactDOM.createRoot()
