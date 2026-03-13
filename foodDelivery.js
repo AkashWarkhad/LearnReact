@@ -312,11 +312,12 @@ const Body = () => {
 
       <div className="restro-container">
         {
-            source.map((rest)=> (
+            source.map((rest)=> 
+            (
+                /**Key should be present always & use of index as a key is not recommended */
                 <Card key={rest.info.resId} params={rest.info}></Card>
             ))
         }
-        
       </div>
     </div>
   );
