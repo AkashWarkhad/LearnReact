@@ -1,0 +1,77 @@
+.header 
+{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+
+.logo
+{
+    width: 90px;
+    height: 85px;
+}
+
+.nav-items {
+    align-content: center;
+}
+
+.nav-items> ul {
+    display: flex;
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+    margin: 10px;
+    list-style-type: none;
+}
+
+.search-bar {
+    padding: 10px;
+}
+
+.restro-card {
+    padding: 5px;
+    margin: 5px;
+    width: 245px;
+    height: 260px;
+    background-color: bisque;
+}
+
+.card-img {
+    width: 100%;
+    height: 60%;
+}
+
+.more-info{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.restro-card:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    transform: scale(1.02);
+}
+
+.cuisine {
+    padding: 2px;
+    margin: 2px;
+}
+
+.info {
+    margin: 2px;
+    padding: 2px;
+}
+
+.restro {
+    padding: 2px;
+}
+
+.restro-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
