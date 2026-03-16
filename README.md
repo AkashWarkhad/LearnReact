@@ -99,6 +99,7 @@ This repository will include implementations and practice examples for the follo
 - Browserslist: https://browsersl.ist/
 - BrowserslistDev: https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
 - Bable: https://babeljs.io/
+- Folder Structure : https://legacy.reactjs.org/docs/faq-structure.html
 
 
 ---

@@ -1,24 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-/**
- * Food app design :
- * HEADER :
- *  - Logo
- *  - Nav Items
- *
- * BODY :
- *  - Search Bar
- *  - Restaurant Container
- *      - Food Cards
- *          - Img, Name of restro, star rating, cusines, delivery time
- *
- * FOOTER :
- *  - Copyrights
- *  - Contact details
- *  - Links
- *  - Addess
- */
+import Card from "./RestrCard";
 
 const source = [
   {
@@ -261,50 +241,6 @@ const source = [
   },
 ];
 
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn7eaTHYrwbIDLDcu6q9UGxpa6vZ8aRoMzfQ&s"
-        ></img>
-      </div>
-
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const Card = ({params}) => 
-{
-    const {name, image, rating, cuisine, cft} = params;
-    return (
-        <div className="restro-card">
-        <img
-            className="card-img"
-            src={image?.url?? "https://b.zmtcdn.com/data/pictures/6/20873206/fb8df9abc30109756ebcb080f6e3003e.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"}
-        ></img>
-
-        <b className="restro">{name}</b>
-        <p className="cuisine">{cuisine.join(", ")}</p>
-
-        <div className="more-info">
-            <p className="info">{rating.aggregate_rating}</p>
-            <p className="info">Votes({rating.votes})</p>
-            <p className="info">{cft.text}</p>
-        </div>
-        </div>
-    );
-};
-
 const Body = () => {
   return (
     <div className="body">
@@ -323,21 +259,4 @@ const Body = () => {
   );
 };
 
-const Footer = () => 
-{
-  return <h1></h1>;
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-      <Footer />
-    </div>
-  );
-};
-
-// Retrieve the start tag & render the page
-const start = ReactDOM.createRoot(document.getElementById("start"));
-start.render(<AppLayout />);
+export default Body;
