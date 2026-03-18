@@ -1,3 +1,5 @@
+import { DEFAULT_CARD_IMAGE_URL } from "../utils/Constant";
+
 const Card = ({params}) => 
 {
     const {name, image, rating, cuisine, cft} = params;
@@ -5,7 +7,7 @@ const Card = ({params}) =>
         <div className="restro-card">
         <img
             className="card-img"
-            src={image?.url?? "https://b.zmtcdn.com/data/pictures/6/20873206/fb8df9abc30109756ebcb080f6e3003e.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"}
+            src={image?.url?? DEFAULT_CARD_IMAGE_URL}
         ></img>
 
         <b className="restro">{name}</b>

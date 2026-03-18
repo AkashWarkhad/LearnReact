@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./src/components/Header";
-import Body from "./src/components/Body";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
 
 /**
  * Food app design :
@@ -22,10 +23,7 @@ import Body from "./src/components/Body";
  *  - Addess
  */
 
-const Footer = () => 
-{
-  return <h1></h1>;
-};
+
 
 const AppLayout = () => {
   return (
