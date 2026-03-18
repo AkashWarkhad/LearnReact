@@ -26,8 +26,13 @@
     list-style-type: none;
 }
 
-.search-bar {
+.filter-bar {
     padding: 10px;
+}
+
+.filter-btn {
+    cursor: pointer;
+    
 }
 
 .restro-card {
@@ -75,3 +80,14 @@
     justify-content: space-evenly;
 }
 
+.footer {
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.634);
+    height: 50px;
+    align-content: center;
+}
+
+.copyrights {
+    text-align: center;
+    color: white;
+}
