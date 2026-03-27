@@ -9,7 +9,7 @@ const Body = () =>
   const [sourceData, setSourceData] = useState([]);
 
   /**
-   * useEffect is accepts the 2 parameters (CallBackFunction, [])
+   * useEffect is accepts the 2 parameters (CallBackFunction, [Value- If its changes then useEffect refreshes/Activate])
    * Generally useEffect hook called after Body/main content renders.
    */
   useEffect(()=> 
@@ -30,17 +30,12 @@ const Body = () =>
     setSourceData(restaurants);
   }
 
-
-  if(sourceData.length === 0)
-  {
-    // Can replace with loader icon.
-    //return <h1>Loading...</h1>
-
-    return <ShimmerLoader/>
-  }
-
   console.log("1. Body Rendering Called")
-  return (
+
+  // Conditional Rendering
+  return sourceData.length === 0 
+  ? (<ShimmerLoader/>)
+  : (
     <div className="body">
       <div className="filter-bar">
         <button className="filter-btn" onClick=
