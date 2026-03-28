@@ -1,8 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import Header from "./components/Header";
-import Body from "./components/Body";
-import Footer from "./components/Footer";
+import Header from "./Header";
+import Body from "./Body";
+import Footer from "./Footer";
+
 
 /**
  * Food app design :
@@ -23,8 +22,6 @@ import Footer from "./components/Footer";
  *  - Addess
  */
 
-
-
 const AppLayout = () => 
 {
   return (
@@ -36,6 +33,4 @@ const AppLayout = () =>
   );
 };
 
-// Retrieve the start tag & render the page
-const start = ReactDOM.createRoot(document.getElementById("start"));
-start.render(<AppLayout />);
+export default AppLayout;
