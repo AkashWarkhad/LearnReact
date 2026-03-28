@@ -23,7 +23,8 @@ const Body = () =>
 
   const fetchData = async () => 
   {
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204&lng=73.8567&page_type=DESKTOP_WEB_LISTING");
+    // https://corsproxy.io/? use corsProxy is used to avoid CORS issue. has a limit so keep mind in prod
+    const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204&lng=73.8567&page_type=DESKTOP_WEB_LISTING");
     const json = await data.json();
     console.log("Swiggy Api:", json);
 
