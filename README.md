@@ -107,6 +107,9 @@ This repository will include implementations and practice examples for the follo
 
 ---
 
+### ShortCut
+- Shortcut to create react component in new file : rafce
+
 ## 📦 Project Setup
 
 Clone the repository:
