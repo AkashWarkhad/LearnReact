@@ -1,22 +1,22 @@
-import { DEFAULT_CARD_IMAGE_URL } from "../utils/Constant";
 
 const Card = ({params}) => 
 {
-    const {name, image, rating, cuisine, cft} = params;
+    const {name, cloudinaryImageId, avgRating, cuisines, totalRatingsString, costForTwo} = params;
     return (
         <div className="restro-card">
         <img
             className="card-img"
-            src={image?.url?? DEFAULT_CARD_IMAGE_URL}
-        ></img>
+            src= {"https://media-assets.swiggy.com/swiggy/image/upload/" + cloudinaryImageId}
+        >
+        </img>
 
         <b className="restro">{name}</b>
-        <p className="cuisine">{cuisine.join(", ")}</p>
+        <p className="cuisine">{cuisines.join(", ")}</p>
 
         <div className="more-info">
-            <p className="info">{rating.aggregate_rating}</p>
-            <p className="info">Votes({rating.votes})</p>
-            <p className="info">{cft.text}</p>
+            <p className="info">{avgRating}</p>
+            <p className="info">Votes({totalRatingsString})</p>
+            <p className="info">{costForTwo}</p>
         </div>
         </div>
     );
