@@ -7,6 +7,7 @@ const Body = () =>
 {
   // useState Variable - Local state variable super powerful variable
   const [sourceData, setSourceData] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
 
   /**
    * useEffect is accepts the 2 parameters (CallBackFunction, [Value- If its changes then useEffect refreshes/Activate])
@@ -30,6 +31,7 @@ const Body = () =>
     setSourceData(restaurants);
   }
 
+  //Whenever state variable updates then react triggers the reconciliation cycle process(re-rendering the component)
   console.log("1. Body Rendering Called")
 
   // Conditional Rendering
@@ -38,6 +40,33 @@ const Body = () =>
   : (
     <div className="body">
       <div className="filter-bar">
+
+        <div className="search">
+          <input
+            name="inputSearch"
+            className="search-input" 
+            type="search"
+            value={searchInput} // Tied the searchInput with input value
+            onChange={(evt)=>
+              {
+                setSearchInput(evt.target.value); // OnChange of input, the data will be set to searchInput varaible + Input Search box as we tied value with input
+              }}>
+          </input>
+
+          <button 
+            className="search-btn" 
+            onClick={()=> 
+              {
+                // Filter the cards based on input from search bar. value={searchInput} <- binding input with local useState variable
+                const serachFilter = sourceData.filter(x=> x.info.name.toLowerCase().includes(searchInput.toLowerCase()));
+                setSourceData(serachFilter);
+
+                console.log(serachFilter);
+              }}>Search
+          </button>
+        </div>
+        
+        
         <button className="filter-btn" onClick=
           {()=> 
             {

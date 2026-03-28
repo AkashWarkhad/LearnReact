@@ -28,11 +28,12 @@
 
 .filter-bar {
     padding: 10px;
+    display: flex;
 }
 
 .filter-btn {
     cursor: pointer;
-    
+    margin-left: 30px;
 }
 
 .restro-card {
@@ -117,4 +118,7 @@
 .loginBtn{
     height: 30px;
     width: 80px;
+}
+
+.search {
 }
