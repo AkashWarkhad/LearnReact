@@ -7,6 +7,8 @@ const Body = () =>
 {
   // useState Variable - Local state variable super powerful variable
   const [sourceData, setSourceData] = useState([]);
+  const [filterData, setFilterData] = useState([]);
+
   const [searchInput, setSearchInput] = useState("");
 
   /**
@@ -29,6 +31,7 @@ const Body = () =>
     var restaurants = json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? [];
     console.log("Restaurants :", restaurants);
     setSourceData(restaurants);
+    setFilterData(restaurants);
   }
 
   //Whenever state variable updates then react triggers the reconciliation cycle process(re-rendering the component)
@@ -58,10 +61,9 @@ const Body = () =>
             onClick={()=> 
               {
                 // Filter the cards based on input from search bar. value={searchInput} <- binding input with local useState variable
-                const serachFilter = sourceData.filter(x=> x.info.name.toLowerCase().includes(searchInput.toLowerCase()));
-                setSourceData(serachFilter);
-
-                console.log(serachFilter);
+                const searchFilter = sourceData.filter(x=> x.info.name.toLowerCase().includes(searchInput.toLowerCase()));
+                setFilterData(searchFilter);
+                console.log("Filtered Data After Search:" , searchFilter);
               }}>Search
           </button>
         </div>
@@ -83,7 +85,7 @@ const Body = () =>
 
       <div className="restro-container">
         {
-            sourceData.map((rest)=> 
+            filterData.map((rest)=> 
             (
                 /**Key should be present always & use of index as a key is not recommended */
                 <Card key={rest.info.parentId + rest.info.id} params={rest.info}></Card>
