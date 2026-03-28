@@ -110,6 +110,10 @@ This repository will include implementations and practice examples for the follo
 ### ShortCut
 - Shortcut to create react component in new file : rafce
 
+### Types of Routing
+- Server Side Routing
+- Client Side Routing
+
 ## 📦 Project Setup
 
 Clone the repository:

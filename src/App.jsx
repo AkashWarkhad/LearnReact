@@ -61,12 +61,12 @@ const appRouter = createBrowserRouter(
         {
           "path": "/contact",
           "element": <ContactUs />
+        },
+        {
+          "path": "/hello",
+          "element": <HelloWorld />,
         }
       ]
-    },
-    {
-        "path": "/hello",
-        "element": <HelloWorld />,
     }
   ]);
 
