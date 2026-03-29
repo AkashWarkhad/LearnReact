@@ -82,10 +82,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render()
 // Converts React elements (JavaScript objects) into real DOM elements
 // and inserts/replace(Existing content from HTML) them into the browser DOM
-root.render(
+root.render
+(
 
   // RouterProvider is used to connect the router (created using createBrowserRouter) to the React application.
   // It enables navigation and rendering of routes based on the current URL.
-<RouterProvider
-    future={{ v7_startTransition: true }} // Just to disable the warning from next upcomming version
-    router={appRouter} />);
+  <RouterProvider
+      future={{ v7_startTransition: true }} // Just to disable the warning from next upcomming version
+      router={appRouter} />
+);
