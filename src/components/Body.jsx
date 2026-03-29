@@ -1,6 +1,7 @@
 import Card from "./RestrCard";
 import { useState, useEffect } from "react";
 import ShimmerLoader from "./ShimmerLoader";
+import { Link } from "react-router-dom";
 
 const Body = () => 
 {
@@ -99,8 +100,15 @@ const Body = () =>
         {
             filterData.map((rest)=> 
             (
-                /**Key should be present always & use of index as a key is not recommended */
-                <Card key={rest.info.parentId + rest.info.id} params={rest.info}></Card>
+                /**Key should be present always & use of index as a key is not recommended 
+                 * For Routing :
+                 *  - Added Link on top of Card 
+                 *  - Added routing by to= "http://localhost:1234/restaurant/243625"
+                 *  - Moved Key from Card to on Link
+                */
+                <Link key={rest.info.parentId + rest.info.id} to={"/restaurant/" + rest.info.id}>
+                  <Card params={rest.info}></Card>
+                </Link>
             ))
         }
       </div>
