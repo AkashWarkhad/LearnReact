@@ -1,7 +1,7 @@
-import React from "react";
 import Card from "./RestrCard";
 import { useState, useEffect } from "react";
 import ShimmerLoader from "./ShimmerLoader";
+import { Link } from "react-router-dom";
 
 const Body = () => 
 {
@@ -11,10 +11,22 @@ const Body = () =>
 
   const [searchInput, setSearchInput] = useState("");
 
-  /**
-   * useEffect is accepts the 2 parameters (CallBackFunction, [Value- If its changes then useEffect refreshes/Activate])
-   * Generally useEffect hook called after Body/main content renders.
-   */
+ /**
+ * useEffect accepts two parameters:
+ * 1. A callback function (side-effect logic)
+ * 2. A dependency array (optional)
+ *
+ * Behavior of useEffect:
+ * - If no dependency array is provided:
+ *   → Runs after every render of the component
+ *
+ * - If an empty dependency array [] is provided:
+ *   → Runs only once after the initial render (component mount)
+ *
+ * - If dependency array has values [value1, value2]:
+ *   → Runs after initial render and whenever any dependency value changes
+ */
+
   useEffect(()=> 
     {
       console.log("Last - UseEffect Redering Called! after Body rendering completes.");
@@ -77,7 +89,7 @@ const Body = () =>
               .filter(x=> x.info.avgRating >= 4.5)
               .sort((a, b)=> b.info.avgRating - a.info.avgRating);
 
-              setSourceData(filteredData);
+              setFilterData(filteredData);
               console.log("Button Clicked!!! Filtered Data", filteredData);
             }
           }>Filter Top Rated Restaurants
@@ -88,8 +100,15 @@ const Body = () =>
         {
             filterData.map((rest)=> 
             (
-                /**Key should be present always & use of index as a key is not recommended */
-                <Card key={rest.info.parentId + rest.info.id} params={rest.info}></Card>
+                /**Key should be present always & use of index as a key is not recommended 
+                 * For Routing :
+                 *  - Added Link on top of Card 
+                 *  - Added routing by to= "http://localhost:1234/restaurant/243625"
+                 *  - Moved Key from Card to on Link
+                */
+                <Link key={rest.info.parentId + rest.info.id} to={"/restaurant/" + rest.info.id}>
+                  <Card params={rest.info}></Card>
+                </Link>
             ))
         }
       </div>

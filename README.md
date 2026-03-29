@@ -101,9 +101,18 @@ This repository will include implementations and practice examples for the follo
 - Bable: https://babeljs.io/
 - Folder Structure : https://legacy.reactjs.org/docs/faq-structure.html
 - Shimmer Loadder : https://www.npmjs.com/package/react-shimmer-effects
+- CORS Proxy : https://corsproxy.io/
+- React Roter Dom : https://reactrouter.com/ (CMD to Install : npm i react-router-dom)
 
 
 ---
+
+### ShortCut
+- Shortcut to create react component in new file : rafce
+
+### Types of Routing
+- Server Side Routing
+- Client Side Routing
 
 ## 📦 Project Setup
 
