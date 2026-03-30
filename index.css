@@ -131,3 +131,8 @@
     height: 30px;
     width: 80px;
 }
+
+.userCard{
+    padding: 10px;
+    border: 1px solid black;
+}
