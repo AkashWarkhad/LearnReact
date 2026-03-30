@@ -7,32 +7,28 @@ class ContactUsClass extends Component
   constructor(props)
   {
     super(props);
-    console.log(`First - Parent ${this.props.className} Constructor Called!!`);
+    console.log(`First - Parent ${this.props.className} *Constructor* Called!!`);
   }
 
   componentDidMount()
   {
-      console.log("Last - Parent Component Did Mount Called");
+      console.log("Last - Parent *ComponentDidMount* Called");
   }
 
   render()
   {
-    console.log("Parent Render Called!!");
+    console.log("Parent *Render* Called!!");
     return (
       <div>
         <h1>Contact Us :</h1>
         
-        <User 
-          component="Functional Component"
-          location="Pune" />
-        
         <UserClass 
-          component="First Class Component"
+          component="ClassBased Component"
           location= "Mumbai"/>
-        
-        <UserClass 
-          component="Second Class Component"
-          location= "Mumbai"/>
+
+          <User 
+            component="Functional Component"
+            location="Pune" />
       </div>
     );
   }

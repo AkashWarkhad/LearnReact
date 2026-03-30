@@ -18,37 +18,83 @@ class UserClass extends React.Component
         this.state = 
         {
             count: 1,
-            mobNo: "9743483**8"
+            mobNo: "474**83**8",
+            
+            userInfo :{} // Updated data in the ComponentDidMount
         }
 
         // Not recommened move details under state object if you want to update value as its not posible now.
         this.details = "Avail 24 X 7 on Mon to Fri. Sat Sun is Off."
-        console.log(`${this.props.component} Child Constructor called!!`);
+
+        console.log(`${this.props.component} Child *Constructor* called!!`);
     }
 
     // componentDidMount is nothing but the useEffect() Hook Called immediately after a component is mounted. Setting state here will trigger re-rendering.
     // LifeCycle : Constructor => Render(Child Render: (Parent -> Render -> DidMount)) => Component Did Mount
-    componentDidMount()
+    async componentDidMount()
     {
-        console.log(`${this.props.component} Child Component Did Mount Called`);
+        console.log(`${this.props.component} Child *ComponentDidMount* Called`);
 
         // Make a API call to fill the data in the page
+        const data = await fetch("https://api.github.com/users/akashwarkhad");
+        const json = await data.json();
+        console.log(json);
+
+        // Update the userInfo with Api output
+        this.setState({ userInfo: json });
+
+        // This Calls every 1 second & stored in the timer so later on we can clear the setInterval
+        this.timer = setInterval(()=> 
+        {
+            console.log("DidMount Called");
+        }, 1000);
+    }
+
+    componentDidUpdate(prevProps, prevState)
+    {
+        // This is for State values updates
+        if(prevState.count === this.state.count )
+        {
+            console.log(`Count is not changed for ${prevState.count}`);
+        }
+        else{
+            console.log(`Count is changed from ${prevState.count} to ${this.state.count}`);
+        }
+
+        // This is for the Props values updates
+        if(prevProps.component === this.props.component)
+        {
+            console.log(`props is not changed for ${prevProps.component}`);
+        }
+        else{
+            console.log(`props is changed from ${prevProps.component} to ${this.props.component}`);
+        }
+        
+        console.log(`${this.props.component} Child *ComponentDidUpdate* Called!!`);
+    }
+
+    componentWillUnmount()
+    {
+        console.log(`${this.props.component} Child *ComponentWillUnmount* Called!!`);
+        clearInterval(this.timer);
     }
     
 
     render()
     {
-        console.log(`${this.props.component} Child Render Called!!`);
+        console.log(`${this.props.component} Child *Render* Called!!`);
 
         const {component, location} = this.props;
-
+        const {id, login, avatar_url, repos_url} =  this.state.userInfo;
         return(
         <div className="userCard">
 
-            <h2>Akash Warkhad from {component}</h2>
+            <img src={avatar_url}></img>
+            <h2>{login} From {component}</h2>
             <h3>{this.state.count} Location : {location}</h3>
             <p>Email Address : helpdesk24by7@gamail.com</p>
             <p>Mobile No : {this.state.mobNo}</p>
+            <p>Repository : {repos_url}</p>
 
             <button onClick={()=>
             {
