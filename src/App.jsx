@@ -5,7 +5,7 @@ import Error from "./components/Error";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-import ContactUs from "./components/ContactUs";
+import ContactUsClass from "./components/ContactUsClass"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestroMenu from "./components/RestroMenu";
 
@@ -61,7 +61,7 @@ const appRouter = createBrowserRouter(
         },
         {
           "path": "/contact",
-          "element": <ContactUs />
+          "element": <ContactUsClass className = "ContactUsClass"/>
         },
         {
           "path": "/hello",
