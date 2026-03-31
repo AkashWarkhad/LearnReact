@@ -104,6 +104,8 @@ This repository will include implementations and practice examples for the follo
 - CORS Proxy : https://corsproxy.io/
 - React Roter Dom : https://reactrouter.com/ (CMD to Install : npm i react-router-dom)
 - React Life Cycle Method Diagram - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+- Lazy Loading with Suspense - https://react.dev/reference/react/lazy#suspense-for-code-splitting
+- Tailwind CCS Installation guide - https://tailwindcss.com/docs/installation/framework-guides
 
 
 

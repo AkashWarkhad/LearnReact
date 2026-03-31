@@ -69,19 +69,19 @@ const appRouter = createBrowserRouter(
           "element": <ContactUsClass className = "ContactUsClass"/>
         },
         {
+          "path": "/grocery",
+          
+          // Suspense is a React component used to show a fallback UI (like a loader) while a lazy-loaded component is being fetched. It works together with React.lazy for code splitting.
+          // When the user navigates to "Grocery", the component is loaded asynchronously in a separate bundle, and Suspense displays the fallback until loading is complete.
+          "element": <Suspense fallback={<h1>Loading...</h1>}> <Grocery /> </Suspense> 
+        },
+        {
           "path": "/hello",
           "element": <HelloWorld />,
         },
         {
           "path": "/restaurant/:restroId", //Dynamic routing with Id
           "element": <RestroMenu /> 
-        },
-        {
-          "path": "/grocery",
-          
-          // Suspense is a React component used to show a fallback UI (like a loader) while a lazy-loaded component is being fetched. It works together with React.lazy for code splitting.
-          // When the user navigates to "Grocery", the component is loaded asynchronously in a separate bundle, and Suspense displays the fallback until loading is complete.
-          "element": <Suspense fallback={<h1>Loading...</h1>}> <Grocery /> </Suspense> 
         }
       ]
     }
