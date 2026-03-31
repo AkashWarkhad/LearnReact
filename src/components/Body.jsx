@@ -2,6 +2,7 @@ import Card from "./RestrCard";
 import { useState, useEffect } from "react";
 import ShimmerLoader from "./ShimmerLoader";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => 
 {
@@ -49,6 +50,13 @@ const Body = () =>
     console.log("Restaurants :", restaurants);
     setSourceData(restaurants);
     setFilterData(restaurants);
+  }
+
+  const isOnline = useOnlineStatus();
+
+  if(isOnline == false)
+  {
+    return <h1>Looks like your offline!! Pls check your internet connection.</h1>
   }
 
   //Whenever state variable updates then react triggers the reconciliation cycle process(re-rendering the component)

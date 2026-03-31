@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const useRestroInfoCustomHook = (resId) => 
 {
-    const [restroInfo, setRestro] = useState(null);
+    const [restroInfo, setRestroInfo] = useState(null);
 
     useEffect(()=> 
     {
@@ -27,7 +27,7 @@ const useRestroInfoCustomHook = (resId) =>
             var restaurants = json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? [];
             console.log("Restro", restaurants);
 
-            setRestro(restaurants);
+            setRestroInfo(restaurants);
 
             // Hooks return the Fetch data
             return restroInfo;
