@@ -29,6 +29,7 @@ const Header = () =>
           <li><Link to="/about">About Us </Link></li>
 
           <li><a href="/contact">Contact Us</a></li> {/**Not Use Achor Tag Use Link Component */}
+          <li><Link to="/grocery">Grocery</Link></li>
           
           <li><Link to="/hello">Cart</Link></li>
           <li><button className="loginBtn" onClick=
