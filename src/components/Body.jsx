@@ -31,6 +31,10 @@ const Body = () =>
     {
       console.log("Last - UseEffect Redering Called! after Body rendering completes.");
       fetchData();
+
+      return() =>{
+         // cleanup BEFORE next effect run
+      };
     }, []);
 
   const fetchData = async () => 
