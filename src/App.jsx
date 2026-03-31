@@ -8,7 +8,12 @@ import Footer from "./components/Footer";
 import ContactUsClass from "./components/ContactUsClass"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestroMenu from "./components/RestroMenu";
+import { lazy , Suspense } from "react";
+//import Grocery from "./components/Grocery";
 
+/** Comment the above regular import
+ * Lazy Loading : Its also called as Chuncking/ Code Splitting/ Dynamic bundling/ On Demand loading/ Dynamic loading */
+const Grocery = lazy(()=> import("./components/Grocery"));
 
 /**
  * Food app design :
@@ -70,6 +75,13 @@ const appRouter = createBrowserRouter(
         {
           "path": "/restaurant/:restroId", //Dynamic routing with Id
           "element": <RestroMenu /> 
+        },
+        {
+          "path": "/grocery",
+          
+          // Suspense is a React component used to show a fallback UI (like a loader) while a lazy-loaded component is being fetched. It works together with React.lazy for code splitting.
+          // When the user navigates to "Grocery", the component is loaded asynchronously in a separate bundle, and Suspense displays the fallback until loading is complete.
+          "element": <Suspense fallback={<h1>Loading...</h1>}> <Grocery /> </Suspense> 
         }
       ]
     }

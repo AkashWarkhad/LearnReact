@@ -73,6 +73,8 @@ class UserClass extends React.Component
         console.log(`${this.props.component} Child *ComponentDidUpdate* Called!!`);
     }
 
+    // Called immediately before a component is destroyed. Perform any necessary cleanup in this method, 
+    // such as cancelled network requests, or cleaning up any DOM elements created in componentDidMount.
     componentWillUnmount()
     {
         console.log(`${this.props.component} Child *ComponentWillUnmount* Called!!`);

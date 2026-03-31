@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => 
 {
   const [btnName, setBtnName] = useState("Login");
+  const onlineStatus = useOnlineStatus();
 
   return (
     <div className="header">
@@ -22,10 +24,12 @@ const Header = () =>
       */}
       <div className="nav-items">
         <ul>
+          <li>Status {onlineStatus ? "🟢" : "🔴"}</li>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About Us </Link></li>
 
           <li><a href="/contact">Contact Us</a></li> {/**Not Use Achor Tag Use Link Component */}
+          <li><Link to="/grocery">Grocery</Link></li>
           
           <li><Link to="/hello">Cart</Link></li>
           <li><button className="loginBtn" onClick=
