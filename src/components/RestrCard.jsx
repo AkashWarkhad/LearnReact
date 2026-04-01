@@ -3,21 +3,20 @@ const Card = ({params}) =>
 {
     const {name, cloudinaryImageId, avgRating, cuisines, totalRatingsString, costForTwo} = params;
     return (
-        <div className="restro-card">
-        <img
-            className="card-img"
-            src= {"https://media-assets.swiggy.com/swiggy/image/upload/" + cloudinaryImageId}
-        >
-        </img>
+        <div className="w-68 h-90 p-1 m-1 rounded-lg bg-amber-100 hover:bg-amber-200">
+            <img
+                className="h-50 object-cover w-full rounded-lg bg-cover"
+                src= {"https://media-assets.swiggy.com/swiggy/image/upload/" + cloudinaryImageId}>
+            </img>
 
-        <b className="restro">{name}</b>
-        <p className="cuisine">{cuisines.join(", ")}</p>
+            <b className="m-2">{name}</b>
+            <p className="p-2 italic">{cuisines.join(", ")}</p>
 
-        <div className="more-info">
-            <p className="info">{avgRating}</p>
-            <p className="info">Votes({totalRatingsString})</p>
-            <p className="info">{costForTwo}</p>
-        </div>
+            <div className="flex">
+                <p className="p-2">{avgRating}</p>
+                <p className="p-2">Votes({totalRatingsString})</p>
+                <p className="p-2 bold">{costForTwo}</p>
+            </div>
         </div>
     );
 };
