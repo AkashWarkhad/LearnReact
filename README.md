@@ -113,6 +113,7 @@ This repository will include implementations and practice examples for the follo
 
 ### ShortCut
 - Shortcut to create react component in new file : rafce
+- For Tailwind CSS IntelliSense plugin, to see suggestion : Ctrl + SpaceBar
 
 ### Types of Routing
 - Server Side Routing

@@ -9,10 +9,10 @@ const Header = () =>
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
+    <div className="flex justify-between border border-amber-200 bg-linear-to-r from-transparent via-amber-50 to-amber-300">
       <div className="logo-container">
         <img
-          className="logo"
+          className="w-25 h-20 ml-5"
           src={LOGO_URL}
         ></img>
       </div>
@@ -22,17 +22,17 @@ const Header = () =>
          - <Link> is used in React Router for client-side navigation without page reload (Relaods only required component)
          - while <a> causes a full page reload and requests the server. (Reload whole page)
       */}
-      <div className="nav-items">
-        <ul>
-          <li>Status {onlineStatus ? "🟢" : "🔴"}</li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us </Link></li>
+      <div className="flex items-center">
+        <ul className="flex p-2 items-center">
+          <li className="mr-10">Status {onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="mr-10"><Link to="/">Home</Link></li>
+          <li className="mr-10"><Link to="/about">About Us </Link></li>
 
-          <li><a href="/contact">Contact Us</a></li> {/**Not Use Achor Tag Use Link Component */}
-          <li><Link to="/grocery">Grocery</Link></li>
+          <li className="mr-10"><a href="/contact">Contact Us</a></li> {/**Not Use Achor Tag Use Link Component */}
+          <li className="mr-10"><Link to="/grocery">Grocery</Link></li>
           
-          <li><Link to="/hello">Cart</Link></li>
-          <li><button className="loginBtn" onClick=
+          <li className="mr-10"><Link to="/hello">Cart</Link></li>
+          <li className="mr-10"><button className="loginBtn" onClick=
             {
               ()=> { setBtnName(btnName == "Login" ? "Logout" : "Login") }
             }>{btnName}

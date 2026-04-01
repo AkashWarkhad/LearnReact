@@ -1,5 +1,6 @@
 @import "tailwindcss";
-/* 
+
+/* For now I have removed the comment from CSS as al over Tailwind css is not applied So once it applied remove this CSS*/
 #heading
 {
     color: blue;
@@ -137,4 +138,4 @@
 .userCard{
     padding: 10px;
     border: 1px solid black;
-} */
+} 

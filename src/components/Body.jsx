@@ -66,13 +66,14 @@ const Body = () =>
   return sourceData.length === 0 
   ? (<ShimmerLoader/>)
   : (
-    <div className="body">
-      <div className="filter-bar">
+    <div className="body bg-amber-50">
+      <div className="flex p-4">
 
-        <div className="search">
+        <div className="flex">
           <input
             name="inputSearch"
-            className="search-input" 
+            className="border border-solid border-black  m-2 rounded-lg w-100 py-1 px-2  placeholder:text-gray-500 placeholder:italic"
+            placeholder="Search for anything..."
             type="search"
             value={searchInput} // Tied the searchInput with input value
             onChange={(evt)=>
@@ -82,7 +83,7 @@ const Body = () =>
           </input>
 
           <button 
-            className="search-btn" 
+            className="p-3 mx-2 bg-blue-500 rounded-lg shadow-gray-900"
             onClick={()=> 
               {
                 // Filter the cards based on input from search bar. value={searchInput} <- binding input with local useState variable
@@ -94,7 +95,7 @@ const Body = () =>
         </div>
         
         
-        <button className="filter-btn" onClick=
+        <button className="px-2 mx-2 bg-green-400 rounded-lg" onClick=
           {()=> 
             {
               const filteredData = sourceData
@@ -108,7 +109,7 @@ const Body = () =>
         </button>
       </div>
 
-      <div className="restro-container">
+      <div className="flex justify-evenly flex-wrap">
         {
             filterData.map((rest)=> 
             (
