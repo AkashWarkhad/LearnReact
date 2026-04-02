@@ -47,7 +47,7 @@ const Body = () =>
     console.log("Swiggy Api:", json);
 
     // Optional Chaining
-    var restaurants = json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? [];
+    var restaurants = json.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? [];
     console.log("Restaurants :", restaurants);
     setSourceData(restaurants);
     setFilterData(restaurants);

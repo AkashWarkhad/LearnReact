@@ -11,6 +11,7 @@ const RestroMenu = () =>
      * Here using Mock data as Api calls is blocked by swiggy.
      */
     const [restro, setRestro] = useState(menuData);
+    const [showIndex, setShowIndex] = useState(false);
 
     /**
      * useParams is a React Router hook used to access dynamic route parameters from the URL,
@@ -29,7 +30,8 @@ const RestroMenu = () =>
      *  Custom hook which uses useState & useHook under the hood.
      */
     
-    //const restroData = useRestroInfoCustomHook(resId);
+    // const restroData = useRestroInfoCustomHook(resId);
+    // console.log("restroData", restroData);
 
 
     if(restro === null){
@@ -42,22 +44,27 @@ const RestroMenu = () =>
     //const menuCards = menuData[4].groupedCard.cardGroupMap.REGULAR.cards[3].card.card.itemCards;
     //console.log("itemCards", menuCards);
     
-    const restroInfo = menuData[2]?.card?.card?.info;
+    const restroInfo = restro[2]?.card?.card?.info;
 
+    
     //Fetching Restro Menu cards with ItemCategory sections
-    const menuCategories = menuData[4].groupedCard.cardGroupMap.REGULAR.cards.filter(x=> x.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-    console.log("## Category : ", menuCategories);
-
+    const menuCategories = restro[4].groupedCard.cardGroupMap.REGULAR.cards.filter(x=> x.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+    console.log("restroData", menuCategories[1].card.card.itemCards);
     return (
         <div className="p-2 m-1">
             <h1 className="text-center font-bold text-3xl">{restroInfo.name ?? "Green spice Hotel"}</h1>
-            <p className="font-bold text-xl">{restroInfo.cuisines.join(", ") ?? "Coffe, South Indian, North Indian"}</p>
+            <p className=" text-lg m-4">Cuisines: {restroInfo.cuisines.join(", ") ?? "Coffe, South Indian, North Indian"}</p>
 
             <h1 className="text-xl font-bold text-center">Menu</h1>
+
             {
                 /*Show the Menu categories Accordion */
-                menuCategories.map((category) => <MenuCategory data={category?.card?.card}/>)
-
+                menuCategories.map((category, index) => 
+                    <MenuCategory
+                        data={category?.card.card}
+                        key={category.card.card.categoryId}
+                        showItems={true} // Controlled Component
+                    />) 
             }
         </div>
     )
