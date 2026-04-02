@@ -21,9 +21,11 @@ const DisplayCard = ({params}) =>
     );
 };
 
+export default DisplayCard;
+
 // Higher Order Component
 // RestroCard (Input) => RestroCardPromoted (Returns Updated Card)
-export const UpdatedCard = (DisplayCard) => 
+export const UpdatedDisplayCard = (DisplayCard) => 
 {
     return (props) => 
     {
@@ -35,5 +37,3 @@ export const UpdatedCard = (DisplayCard) =>
         );
     };
 };
-
-export default DisplayCard;

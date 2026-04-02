@@ -7,7 +7,7 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import ContactUsClass from "./components/ContactUsClass"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import ShowCard from "./components/Restro/ShowCard";
+import ShowCardData from "./components/Restro/ShowCardData";
 import { lazy , Suspense } from "react";
 //import Grocery from "./components/Grocery";
 
@@ -81,7 +81,7 @@ const appRouter = createBrowserRouter(
         },
         {
           "path": "/restaurant/:restroId", //Dynamic routing with Id
-          "element": <ShowCard /> 
+          "element": <ShowCardData /> 
         }
       ]
     }

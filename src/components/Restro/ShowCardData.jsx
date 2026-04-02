@@ -3,6 +3,7 @@ import { menuData } from "../../utils/menuMockData";
 import { useParams } from "react-router-dom";
 import useRestroInfoCustomHook from "../../utils/useRestroInfoCustomHook";
 import { useState } from "react";
+import MenuCategory from "./MenuCategory";
 
 const RestroMenu = () => 
 {
@@ -38,20 +39,26 @@ const RestroMenu = () =>
     /**
      * FOr now on every card routes we are returing a static data which is commig from the Mock Data file.
      */
-    const menuCards = menuData[4].groupedCard.cardGroupMap.REGULAR.cards[3].card.card.itemCards;
-    console.log("itemCards", menuCards);
-    console.log(menuData[2]?.card?.card?.info);
+    //const menuCards = menuData[4].groupedCard.cardGroupMap.REGULAR.cards[3].card.card.itemCards;
+    //console.log("itemCards", menuCards);
+    
     const restroInfo = menuData[2]?.card?.card?.info;
 
     //Fetching Restro Menu cards with ItemCategory sections
-    const category = menuData[4].groupedCard.cardGroupMap.REGULAR.cards.filter(x=> x.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-    console.log("## category : ", category);
+    const menuCategories = menuData[4].groupedCard.cardGroupMap.REGULAR.cards.filter(x=> x.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+    console.log("## Category : ", menuCategories);
 
     return (
         <div className="p-2 m-1">
             <h1 className="text-center font-bold text-3xl">{restroInfo.name ?? "Green spice Hotel"}</h1>
             <p className="font-bold text-xl">{restroInfo.cuisines.join(", ") ?? "Coffe, South Indian, North Indian"}</p>
-             
+
+            <h1 className="text-xl font-bold text-center">Menu</h1>
+            {
+                /*Show the Menu categories Accordion */
+                menuCategories.map((category) => <MenuCategory data={category?.card?.card}/>)
+
+            }
         </div>
     )
 }
