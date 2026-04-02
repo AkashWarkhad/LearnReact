@@ -43,16 +43,15 @@ const RestroMenu = () =>
     console.log(menuData[2]?.card?.card?.info);
     const restroInfo = menuData[2]?.card?.card?.info;
 
+    //Fetching Restro Menu cards with ItemCategory sections
+    const category = menuData[4].groupedCard.cardGroupMap.REGULAR.cards.filter(x=> x.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+    console.log("## category : ", category);
+
     return (
-        <div>
-            <h1>{restroInfo.name + (Math.random() * 100)  ?? "Green pice Hotel"}</h1>
-            <h3>Cuisines :{restroInfo.cuisines.join(", ") ?? "Coffe, South Indian, North Indian"}</h3>
-            <h2>Menu</h2>
-            <ul>
-                {
-                    menuCards.map(x => <li key={ x.card.info.id}>{x.card.info.name} - RS {x.card.info.price /100}</li>)
-                }
-            </ul>
+        <div className="p-2 m-1">
+            <h1 className="text-center font-bold text-3xl">{restroInfo.name ?? "Green spice Hotel"}</h1>
+            <p className="font-bold text-xl">{restroInfo.cuisines.join(", ") ?? "Coffe, South Indian, North Indian"}</p>
+             
         </div>
     )
 }

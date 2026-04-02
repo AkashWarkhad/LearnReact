@@ -1,4 +1,4 @@
-import Card from "./RestrCard";
+import Card, {UpdatedCard} from "./RestrCard";
 import { useState, useEffect } from "react";
 import ShimmerLoader from "./ShimmerLoader";
 import { Link } from "react-router-dom";
@@ -11,6 +11,7 @@ const Body = () =>
   const [filterData, setFilterData] = useState([]);
 
   const [searchInput, setSearchInput] = useState("");
+  const UpdatedRestroCard = UpdatedCard(Card);
 
  /**
  * useEffect accepts two parameters:
@@ -120,7 +121,11 @@ const Body = () =>
                  *  - Moved Key from Card to on Link
                 */
                 <Link key={rest.info.parentId + rest.info.id} to={"/restaurant/" + rest.info.id}>
-                  <Card params={rest.info}></Card>
+                  {
+                    rest.info.id % 2 === 0
+                    ? <UpdatedRestroCard params={rest.info}/> // This is Updated card
+                    : <Card params={rest.info}></Card>
+                  }
                 </Link>
             ))
         }

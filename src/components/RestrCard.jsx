@@ -21,4 +21,19 @@ const Card = ({params}) =>
     );
 };
 
+// Higher Order Component
+// RestroCard (Input) => RestroCardPromoted (Returns Updated Card)
+export const UpdatedCard = (Card) => 
+{
+    return (props) => 
+    {
+        return(
+            <div>
+                <label className="absolute bg-black text-white p-1 rounded">Promoted</label>
+                <Card  {...props}/>
+            </div>
+        );
+    };
+};
+
 export default Card;
