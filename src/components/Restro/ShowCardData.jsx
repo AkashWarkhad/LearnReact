@@ -52,6 +52,7 @@ const RestroMenu = () =>
 
     
     //Fetching Restro Menu cards with ItemCategory sections
+    // NOTE : Data is not visible then just change array number
     const menuCategories = restro[4].groupedCard.cardGroupMap.REGULAR.cards.filter(x=> x.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
     console.log("restroData", menuCategories[1].card.card.itemCards);
     return (
