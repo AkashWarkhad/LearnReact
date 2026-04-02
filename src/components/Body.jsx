@@ -1,8 +1,9 @@
-import Card from "./RestrCard";
-import { useState, useEffect } from "react";
+import DisplayCard, {UpdatedDisplayCard} from "./Restro/DisplayCard";
+import { useState, useEffect, useEffect, useContext } from "react";
 import ShimmerLoader from "./ShimmerLoader";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => 
 {
@@ -11,6 +12,9 @@ const Body = () =>
   const [filterData, setFilterData] = useState([]);
 
   const [searchInput, setSearchInput] = useState("");
+  const UpdatedCard = UpdatedDisplayCard(DisplayCard);
+
+  const {loggedInUser, setUserName} = useContext(UserContext);
 
  /**
  * useEffect accepts two parameters:
@@ -107,6 +111,16 @@ const Body = () =>
             }
           }>Filter Top Rated Restaurants
         </button>
+
+        <div>
+          <label className="p-2 font-bold">UserName :</label>
+          <input 
+            className="border border-solid border-black  m-2 rounded-lg w-100 py-1 px-2  placeholder:text-gray-500 placeholder:italic"
+            placeholder="Enter UserName..."
+            value={loggedInUser}
+            onChange={(evt) => setUserName(evt.target.value)}
+            />
+        </div>
       </div>
 
       <div className="flex justify-evenly flex-wrap">
@@ -120,7 +134,11 @@ const Body = () =>
                  *  - Moved Key from Card to on Link
                 */
                 <Link key={rest.info.parentId + rest.info.id} to={"/restaurant/" + rest.info.id}>
-                  <Card params={rest.info}></Card>
+                  {
+                    rest.info.id % 2 === 0
+                    ? <UpdatedCard params={rest.info}/> // This is Updated card
+                    : <DisplayCard params={rest.info}/>
+                  }
                 </Link>
             ))
         }

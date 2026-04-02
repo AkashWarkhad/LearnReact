@@ -114,6 +114,12 @@ This repository will include implementations and practice examples for the follo
 ### ShortCut
 - Shortcut to create react component in new file : rafce
 - For Tailwind CSS IntelliSense plugin, to see suggestion : Ctrl + SpaceBar
+- Shortcut to add Emoji : Windows Key + .
+
+### Install Plugins & Extensions : 
+- React Developer Tool Extension - Which enables component & profiler in the inspect section
+- Allow CORS Extension
+- JSON Viewer Extension
 
 ### Types of Routing
 - Server Side Routing

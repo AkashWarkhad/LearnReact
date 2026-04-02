@@ -1,4 +1,7 @@
 import React from "react";
+import UserContext from "../utils/UserContext";
+import { Form } from "react-router-dom";
+
 
 /**
  * A class-based component is a React component defined using ES6 class syntax.
@@ -97,6 +100,11 @@ class UserClass extends React.Component
             <p>Email Address : helpdesk24by7@gamail.com</p>
             <p>Mobile No : {this.state.mobNo}</p>
             <p>Repository : {repos_url}</p>
+
+            {/* User Class in Class Component using Consumer */}
+            <UserContext.Consumer>
+                    {(data)=> <h1>User Context in Class Component : <b>"{data.loggedInUser}"</b></h1>}
+            </UserContext.Consumer>
 
             <button onClick={()=>
             {

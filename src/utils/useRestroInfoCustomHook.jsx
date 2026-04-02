@@ -16,14 +16,14 @@ const useRestroInfoCustomHook = (resId) =>
 
     async function fetchData()
     {
-        const resp = await fetch(
+        const data = await fetch(
             "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.5211&lng=73.8502&restaurantId=" 
             + resId + 
             "434066&catalog_qa=undefined&submitAction=ENTER");
 
             const json = await data.json();
 
-            console.log("Card Data:", json);
+            console.log(resId + " Restro Data:", json);
             var restaurants = json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? [];
             console.log("Restro", restaurants);
 

@@ -61,31 +61,29 @@ export const menuData = [
           totalRatingsString: "7.5K+ ratings",
           sla: {
             restaurantId: "434066",
-            deliveryTime: 28,
-            minDeliveryTime: 25,
-            maxDeliveryTime: 30,
-            lastMileTravel: 1.6,
+            deliveryTime: 63,
+            minDeliveryTime: 60,
+            maxDeliveryTime: 70,
+            lastMileTravel: 14.5,
             serviceability: "SERVICEABLE",
             stressFactor: 1,
             rainMode: "RAIN_MODE_NONE",
             longDistance: "LONG_DISTANCE_NOT_LONG_DISTANCE",
             zoneId: 94,
-            slaString: "25-30 MINS",
-            lastMileTravelString: "1.6 km",
+            slaString: "60-70 MINS",
+            lastMileTravelString: "14.5 km",
             iconType: "ICON_TYPE_EMPTY",
           },
           availability: {
-            nextCloseTime: "2026-03-29 23:00:00",
+            nextCloseTime: "2026-04-02 23:00:00",
             visibility: true,
             opened: true,
             restaurantClosedMeta: {},
           },
           aggregatedDiscountInfo: {
-            header: "Freedel",
             shortDescriptionList: [
               {
-                meta: "Freedel",
-                discountType: "FREE_DELIVERY",
+                discountType: "Flat",
                 operationType: "RESTAURANT",
               },
               {
@@ -95,12 +93,12 @@ export const menuData = [
             ],
             descriptionList: [
               {
-                meta: "Freedel",
-                discountType: "FREE_DELIVERY",
+                meta: "Flat ₹150 off | Use AXISREWARDS Above ₹500",
+                discountType: "Flat",
                 operationType: "RESTAURANT",
               },
               {
-                meta: "20% off upto ₹150|Use RUPAYCC150 Above ₹499",
+                meta: "10% off upto ₹75|Use VISAPLATINUMDC Above ₹300",
                 discountType: "Percentage",
                 operationType: "RESTAURANT",
               },
@@ -127,11 +125,9 @@ export const menuData = [
           ],
           totalRatings: 7500,
           aggregatedDiscountInfoV2: {
-            header: "Freedel",
             shortDescriptionList: [
               {
-                meta: "Freedel",
-                discountType: "FREE_DELIVERY",
+                discountType: "Flat",
                 operationType: "RESTAURANT",
               },
               {
@@ -141,12 +137,12 @@ export const menuData = [
             ],
             descriptionList: [
               {
-                meta: "Freedel",
-                discountType: "FREE_DELIVERY",
+                meta: "Flat ₹150 off | Use AXISREWARDS Above ₹500",
+                discountType: "Flat",
                 operationType: "RESTAURANT",
               },
               {
-                meta: "20% off upto ₹150|Use RUPAYCC150 Above ₹499",
+                meta: "10% off upto ₹75|Use VISAPLATINUMDC Above ₹300",
                 discountType: "Percentage",
                 operationType: "RESTAURANT",
               },
@@ -157,6 +153,35 @@ export const menuData = [
           headerBanner: {
             url: "swiggy://webview?is_external=false&webview_url=https://www.swiggy.com/restaurant-info/434066",
           },
+          expectationNotifiers: [
+            {
+              icon: {
+                imageId:
+                  "equitable_serviceability/es-icons/es-location-icon.png",
+                clickable: true,
+              },
+              popup: {
+                popupType: "HALF_CARD",
+                cta: {},
+              },
+              halfCardPopup: {
+                halfCardPopupHeader: {
+                  message: "Ordering from your far away favourite!",
+                  imageId:
+                    "equitable_serviceability/es-icons/es-half-card-icon.png",
+                },
+                halfCardPopupDescription: [
+                  {
+                    message:
+                      "Far away orders generally take longer and may impact the food temperature",
+                    imageId:
+                      "equitable_serviceability/es-icons/es-half-card-food.png",
+                  },
+                ],
+              },
+              trailingIcon: {},
+            },
+          ],
           ratingSlab: "RATING_SLAB_5",
           orderabilityCommunication: {
             title: {},
@@ -172,13 +197,7 @@ export const menuData = [
           },
           latLong: "18.519466138,73.841380477",
           backgroundImageOverlayInfo: {},
-          menuHeaderLottie: {
-            menuHeaderLottie:
-              "https://media-assets.swiggy.com/bolt/bolt%2015%20black.json?updatedAt=1733379625251",
-            frequencyCapping: {},
-          },
           featuredSectionInfo: {},
-          hasBoltItems: true,
         },
         analytics: {},
       },
@@ -215,39 +234,18 @@ export const menuData = [
             offers: [
               {
                 info: {
-                  header: "20% OFF UPTO ₹150",
-                  offerTagColor: "#E46D47",
-                  logoBottom:
-                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/3/22/8613045b-9f89-4ee0-93b2-aecb2c45b2fb_RuPay.png",
-                  offerIds: ["e46bd31b-edd9-445b-9e1c-84805b05b625"],
-                  expiryTime: "1970-01-01T00:00:00Z",
-                  couponCode: "USE RUPAYCC150",
-                  description: "ABOVE ₹499",
-                  offerType: "offers",
-                  restId: "434066",
-                  offerLogo:
-                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/3/22/8613045b-9f89-4ee0-93b2-aecb2c45b2fb_RuPay.png",
-                  descriptionTextColor: "#7302060C",
-                  primaryDescription: "USE RUPAYCC150",
-                },
-                cta: {
-                  type: "OFFER_HALF_CARD",
-                },
-              },
-              {
-                info: {
                   header: "FLAT ₹150 OFF",
                   offerTagColor: "#E46D47",
                   logoBottom:
-                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/3/1/297211d6-0a0c-4d11-a6f4-f8727ac2aff6_Axis.png",
-                  offerIds: ["49c6aa12-f2fa-4298-9d4e-71d9f736e34a"],
+                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/3/31/ffbcba46-2ab0-4ac3-888f-ed3abd69dd2e_Axis.png",
+                  offerIds: ["d5748402-854d-4cd2-a232-6ae9be2edd08"],
                   expiryTime: "1970-01-01T00:00:00Z",
                   couponCode: "USE AXISREWARDS",
                   description: "ABOVE ₹500",
                   offerType: "offers",
                   restId: "434066",
                   offerLogo:
-                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/3/1/297211d6-0a0c-4d11-a6f4-f8727ac2aff6_Axis.png",
+                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/3/31/ffbcba46-2ab0-4ac3-888f-ed3abd69dd2e_Axis.png",
                   descriptionTextColor: "#7302060C",
                   primaryDescription: "USE AXISREWARDS",
                 },
@@ -257,20 +255,41 @@ export const menuData = [
               },
               {
                 info: {
-                  header: "FLAT ₹200 OFF",
+                  header: "10% OFF UPTO ₹75",
                   offerTagColor: "#E46D47",
                   logoBottom:
-                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/2/28/c806338f-2f02-4a1e-a3f3-78cdb0099f79_Axis.png",
-                  offerIds: ["33a265a6-d580-407c-9a54-b320762d2679"],
+                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/4/1/c8c7546a-a2e6-4866-88ef-a5f7201822e8_Visa.png",
+                  offerIds: ["49b4cc8e-3a16-442c-9dae-9df87369b3ac"],
                   expiryTime: "1970-01-01T00:00:00Z",
-                  couponCode: "USE AXIS200",
-                  description: "ABOVE ₹1000",
+                  couponCode: "USE VISAPLATINUMDC",
+                  description: "ABOVE ₹300",
                   offerType: "offers",
                   restId: "434066",
                   offerLogo:
-                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/2/28/c806338f-2f02-4a1e-a3f3-78cdb0099f79_Axis.png",
+                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/4/1/c8c7546a-a2e6-4866-88ef-a5f7201822e8_Visa.png",
                   descriptionTextColor: "#7302060C",
-                  primaryDescription: "USE AXIS200",
+                  primaryDescription: "USE VISAPLATINUMDC",
+                },
+                cta: {
+                  type: "OFFER_HALF_CARD",
+                },
+              },
+              {
+                info: {
+                  header: "FLAT ₹125 OFF",
+                  offerTagColor: "#E46D47",
+                  logoBottom:
+                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/4/1/ef2ea047-8494-4682-855d-339c6db7517a_IDFC.png",
+                  offerIds: ["5c631f66-4a17-41d0-87fd-c1b2843743ad"],
+                  expiryTime: "1970-01-01T00:00:00Z",
+                  couponCode: "USE IDFCDC125",
+                  description: "ABOVE ₹499",
+                  offerType: "offers",
+                  restId: "434066",
+                  offerLogo:
+                    "MARKETING_BANNERS/IMAGES/OFFERS/2026/4/1/ef2ea047-8494-4682-855d-339c6db7517a_IDFC.png",
+                  descriptionTextColor: "#7302060C",
+                  primaryDescription: "USE IDFCDC125",
                 },
                 cta: {
                   type: "OFFER_HALF_CARD",
@@ -325,17 +344,11 @@ export const menuData = [
                     attributes: {
                       displayText: "VEG",
                     },
+                    isSelected: true,
                   },
                   nonvegFilter: {
                     attributes: {
                       displayText: "NONVEG",
-                    },
-                  },
-                  bolt: {
-                    attributes: {
-                      displayText: "Food in 10-15 mins",
-                      displayImage: "bolt/bolt%2011.png",
-                      unselectedDisplayImage: "bolt/bolt%2011.png",
                     },
                   },
                 },
@@ -352,159 +365,6 @@ export const menuData = [
                     "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
                   title: "Recommended",
                   itemCards: [
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145745313",
-                          name: "Wada Sambar Chatni                                    ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "Deep fried savoury snack, made from urad dal and other spices.(Served With Sambar and Chutney)",
-                          imageId: "nz9cfmwkdq1sizbuyop0",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 9000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          showImage: true,
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "1488 ratings",
-                              ratingCountV2: "1.5K+",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998361",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145741828",
-                          name: "Onion Uttappa                     ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "An interesting spin on the dosa with onions mixed into the dosa batter and spread to a thick consistency",
-                          imageId: "exzofvueqoo05w8daaum",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 12000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          showImage: true,
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "1152 ratings",
-                              ratingCountV2: "1.2K+",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998317",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145741821",
-                          name: "Masala Dosa                     ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "A semi-spicy, crispy and delicious dosa with masala folded into it.",
-                          imageId: "xljvwxzldaocfxf1qpvz",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 11000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          showImage: true,
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "856 ratings",
-                              ratingCountV2: "856",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998306",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
                     {
                       card: {
                         "@type":
@@ -653,7 +513,7 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {
                               rating: "4.7",
-                              ratingCount: "2566 ratings",
+                              ratingCount: "2579 ratings",
                               ratingCountV2: "2.6K+",
                             },
                             ratingsPresentationConfig: {
@@ -671,6 +531,7 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
+                          parentId: "38998293",
                           menuFilterIds: ["bestseller", "VEG", "toprated"],
                         },
                         analytics: {},
@@ -709,7 +570,7 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {
                               rating: "4.6",
-                              ratingCount: "1488 ratings",
+                              ratingCount: "1495 ratings",
                               ratingCountV2: "1.5K+",
                             },
                             ratingsPresentationConfig: {
@@ -766,7 +627,7 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {
                               rating: "4.6",
-                              ratingCount: "1152 ratings",
+                              ratingCount: "1157 ratings",
                               ratingCountV2: "1.2K+",
                             },
                             ratingsPresentationConfig: {
@@ -784,127 +645,7 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          menuFilterIds: ["bestseller", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808392",
-                          name: "Potato Wada Chatni Sambar",
-                          category: "South Indian",
-                          description:
-                            "Delicious lip-smacking Potato vadas served with Chutney and Sambar.",
-                          imageId: "dau9bsevtrshjejxthfw",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 8300,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {
-                            text: "Bestseller",
-                            textColor: "#ffffff",
-                            topBackgroundColor: "#d53d4c",
-                            bottomBackgroundColor: "#b02331",
-                          },
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          isBestseller: true,
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "692 ratings",
-                              ratingCountV2: "692",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998327",
-                          menuFilterIds: [
-                            "BOLT",
-                            "bestseller",
-                            "VEG",
-                            "toprated",
-                          ],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808388",
-                          name: "Idli Wada Sambar",
-                          category: "South Indian",
-                          description:
-                            "Serves 1 | A classic and delicious combo from South with your go to dish idli and crunchy crispy vada served with chutney and sambhar.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 10300,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                            portionSize: "Serves 1",
-                          },
-                          ribbon: {
-                            text: "Bestseller",
-                            textColor: "#ffffff",
-                            topBackgroundColor: "#d53d4c",
-                            bottomBackgroundColor: "#b02331",
-                          },
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          isBestseller: true,
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "651 ratings",
-                              ratingCountV2: "651",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998294",
+                          parentId: "38998317",
                           menuFilterIds: ["bestseller", "VEG", "toprated"],
                         },
                         analytics: {},
@@ -942,9 +683,9 @@ export const menuData = [
                           isBestseller: true,
                           ratings: {
                             aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "856 ratings",
-                              ratingCountV2: "856",
+                              rating: "4.7",
+                              ratingCount: "862 ratings",
+                              ratingCountV2: "862",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -963,57 +704,6 @@ export const menuData = [
                           },
                           parentId: "38998306",
                           menuFilterIds: ["bestseller", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808371",
-                          name: "Onion Set Dosa",
-                          category: "South Indian",
-                          description:
-                            "A delightfully wholesome combo of mouthwatering onion set dosa, served along with delectable sambhar and chutney.",
-                          imageId: "dq3tmlalzypjf3ctufvu",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 15000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "379 ratings",
-                              ratingCountV2: "379",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998316",
-                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -1076,20 +766,19 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "77808367",
-                          name: "Rava Sada Dosa",
+                          id: "77808392",
+                          name: "Potato Wada Chatni Sambar",
                           category: "South Indian",
                           description:
-                            "Serves 1 | Deliciously crispy dosa made with rava; served with sambhar and chutney - perfect sanck to satisfy your hunger.",
-                          imageId: "ylfruywjmbsalonwnjzt",
+                            "Delicious lip-smacking Potato vadas served with Chutney and Sambar.",
+                          imageId: "dau9bsevtrshjejxthfw",
                           inStock: 1,
                           isVeg: 1,
-                          price: 10000,
+                          price: 8300,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
                             vegClassifier: "VEG",
-                            portionSize: "Serves 1",
                           },
                           ribbon: {},
                           type: "ITEM",
@@ -1098,8 +787,8 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {
                               rating: "4.7",
-                              ratingCount: "332 ratings",
-                              ratingCountV2: "332",
+                              ratingCount: "694 ratings",
+                              ratingCountV2: "694",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -1116,7 +805,7 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          parentId: "38998334",
+                          parentId: "38998327",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -1150,8 +839,8 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {
                               rating: "4.9",
-                              ratingCount: "100 ratings",
-                              ratingCountV2: "100",
+                              ratingCount: "101 ratings",
+                              ratingCountV2: "101",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -1169,57 +858,6 @@ export const menuData = [
                             },
                           },
                           parentId: "38998283",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808379",
-                          name: "Sp Tomato Uttappa",
-                          category: "South Indian",
-                          description:
-                            "A savory South Indian delight with a tangy twist, perfect for those who relish the flavors of the region.",
-                          imageId: "976fb9372e524967bfe91cf331785e4e",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 18000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.9",
-                              ratingCount: "127 ratings",
-                              ratingCountV2: "127",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998342",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -1251,9 +889,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "373 ratings",
-                              ratingCountV2: "373",
+                              rating: "4.7",
+                              ratingCount: "376 ratings",
+                              ratingCountV2: "376",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -1282,15 +920,15 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "77808359",
-                          name: "Mysore Masala Dosa",
+                          id: "77808366",
+                          name: "Rava Masala Dosa",
                           category: "South Indian",
                           description:
-                            "A semi-spicy, crispy and delicious dosa with masala folded into it - Totally goes with your anytime meal",
-                          imageId: "keodcev9xdjax0t6h2cs",
+                            "Deliciously crispy dosa made with rava.Served with sambhar and chutney ,a perfect snack to satisfy your hunger.",
+                          imageId: "zqztk1e4he7y0rzuezko",
                           inStock: 1,
                           isVeg: 1,
-                          price: 17500,
+                          price: 13000,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
@@ -1302,9 +940,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "294 ratings",
-                              ratingCountV2: "294",
+                              rating: "4.8",
+                              ratingCount: "374 ratings",
+                              ratingCountV2: "374",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -1321,7 +959,58 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          parentId: "38998313",
+                          parentId: "38998332",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808388",
+                          name: "Idli Wada Sambar",
+                          category: "South Indian",
+                          description:
+                            "Serves 1 | A classic and delicious combo from South with your go to dish idli and crunchy crispy vada served with chutney and sambhar.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 10300,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                            portionSize: "Serves 1",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.7",
+                              ratingCount: "651 ratings",
+                              ratingCountV2: "651",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998294",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -1385,6 +1074,108 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
+                          id: "77808359",
+                          name: "Mysore Masala Dosa",
+                          category: "South Indian",
+                          description:
+                            "A semi-spicy, crispy and delicious dosa with masala folded into it - Totally goes with your anytime meal",
+                          imageId: "keodcev9xdjax0t6h2cs",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 17500,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "296 ratings",
+                              ratingCountV2: "296",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998313",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808379",
+                          name: "Sp Tomato Uttappa",
+                          category: "South Indian",
+                          description:
+                            "A savory South Indian delight with a tangy twist, perfect for those who relish the flavors of the region.",
+                          imageId: "976fb9372e524967bfe91cf331785e4e",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 18000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.9",
+                              ratingCount: "127 ratings",
+                              ratingCountV2: "127",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998342",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
                           id: "77808369",
                           name: "Cut Dosa",
                           category: "South Indian",
@@ -1425,419 +1216,6 @@ export const menuData = [
                             },
                           },
                           parentId: "38998277",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808366",
-                          name: "Rava Masala Dosa",
-                          category: "South Indian",
-                          description:
-                            "Deliciously crispy dosa made with rava.Served with sambhar and chutney ,a perfect snack to satisfy your hunger.",
-                          imageId: "zqztk1e4he7y0rzuezko",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 13000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "374 ratings",
-                              ratingCountV2: "374",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998332",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808372",
-                          name: "Mysore Cheese Sada Dosa",
-                          category: "South Indian",
-                          description:
-                            "Serves 1 | A semi-spicy, crispy and delicious dosa topped with Cheese",
-                          imageId: "67c7bbb2a6e3ef495baf3ac6dac512d8",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 21000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                            portionSize: "Serves 1",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "126 ratings",
-                              ratingCountV2: "126",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998312",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808378",
-                          name: "Cheese Uttappa",
-                          category: "South Indian",
-                          description:
-                            "A delectable South Indian specialty oozing with cheesy goodness.",
-                          imageId: "7533ee556e883b05376e55dcb42485e7",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 18000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "87 ratings",
-                              ratingCountV2: "87",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998269",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808365",
-                          name: "Rava Masala Dosa With Butter",
-                          category: "South Indian",
-                          description:
-                            "Serves 1 | Tawa- toasted, crispy rava dosa folded in with masala and butter - Super light and Healthy! Usually served with chutney and sambar.",
-                          imageId: "77bb8dcfe78b83c46fd96bd15050aa65",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 17000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                            portionSize: "Serves 1",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.9",
-                              ratingCount: "61 ratings",
-                              ratingCountV2: "61",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998333",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808361",
-                          name: "Cheese Cut Dosa",
-                          category: "South Indian",
-                          description:
-                            "Serves 1 | A scrumptious combo of dosa with potato and masala folded into it, cut into pieces; served with chutneys and sambhar.",
-                          imageId: "b8976ca70c0a52ee893f040e3a45c01e",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 19000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                            portionSize: "Serves 1",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "3.8",
-                              ratingCount: "46 ratings",
-                              ratingCountV2: "46",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#D9EFEC", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_medium",
-                              ratingTextColor: "rating_medium",
-                              ratingCountTextColor: "rating_medium",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998263",
-                          menuFilterIds: ["VEG"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808374",
-                          name: "Cheese Sada Dosa",
-                          category: "South Indian",
-                          description:
-                            "Tawa- toasted, crispy dosa with an indulging cheese-spread.",
-                          imageId: "clztwnacznsaxj0ojq03",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 16000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "58 ratings",
-                              ratingCountV2: "58",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998266",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808360",
-                          name: "Cheese Masala Dosa",
-                          category: "South Indian",
-                          description:
-                            "Crispy dosa with a potato filling, topped with cheese and served with sambar and chutney.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/232c1b8e-7891-4cac-bbd9-32575d8d52b7_97189ad1-05db-43de-9914-d69869d9824b.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 18000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "23 ratings",
-                              ratingCountV2: "23",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998265",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808385",
-                          name: "Tomato Omelette",
-                          category: "South Indian",
-                          description:
-                            "A delightful South Indian specialty bursting with vibrant flavors, marrying the essence of juicy tomatoes with a fluffy omelette.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/6/22/5dd6b977-834a-4878-96d1-62541c9ae7d6_dc8e9839-b4c8-4374-8a8e-8ba98c28468b.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 13000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "118 ratings",
-                              ratingCountV2: "118",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998349",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -1901,14 +1279,15 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "77808390",
-                          name: "Podi Idli",
+                          id: "77808367",
+                          name: "Rava Sada Dosa",
                           category: "South Indian",
                           description:
-                            "Serves 1 | Fluffy and steamed podi idlis topped with flavorsome powder served with 2 types of chutney and sambhar.",
+                            "Serves 1 | Deliciously crispy dosa made with rava; served with sambhar and chutney - perfect sanck to satisfy your hunger.",
+                          imageId: "ylfruywjmbsalonwnjzt",
                           inStock: 1,
                           isVeg: 1,
-                          price: 14000,
+                          price: 10000,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
@@ -1921,9 +1300,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "4.5",
-                              ratingCount: "111 ratings",
-                              ratingCountV2: "111",
+                              rating: "4.7",
+                              ratingCount: "333 ratings",
+                              ratingCountV2: "333",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -1940,7 +1319,420 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          parentId: "38998325",
+                          parentId: "38998334",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808385",
+                          name: "Tomato Omelette",
+                          category: "South Indian",
+                          description:
+                            "A delightful South Indian specialty bursting with vibrant flavors, marrying the essence of juicy tomatoes with a fluffy omelette.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/6/22/5dd6b977-834a-4878-96d1-62541c9ae7d6_dc8e9839-b4c8-4374-8a8e-8ba98c28468b.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 13000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.7",
+                              ratingCount: "118 ratings",
+                              ratingCountV2: "118",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998349",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808372",
+                          name: "Mysore Cheese Sada Dosa",
+                          category: "South Indian",
+                          description:
+                            "Serves 1 | A semi-spicy, crispy and delicious dosa topped with Cheese",
+                          imageId: "67c7bbb2a6e3ef495baf3ac6dac512d8",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 21000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                            portionSize: "Serves 1",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "126 ratings",
+                              ratingCountV2: "126",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998312",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808371",
+                          name: "Onion Set Dosa",
+                          category: "South Indian",
+                          description:
+                            "A delightfully wholesome combo of mouthwatering onion set dosa, served along with delectable sambhar and chutney.",
+                          imageId: "dq3tmlalzypjf3ctufvu",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 15000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.6",
+                              ratingCount: "380 ratings",
+                              ratingCountV2: "380",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998316",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808378",
+                          name: "Cheese Uttappa",
+                          category: "South Indian",
+                          description:
+                            "A delectable South Indian specialty oozing with cheesy goodness.",
+                          imageId: "7533ee556e883b05376e55dcb42485e7",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 18000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.6",
+                              ratingCount: "87 ratings",
+                              ratingCountV2: "87",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998269",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808361",
+                          name: "Cheese Cut Dosa",
+                          category: "South Indian",
+                          description:
+                            "Serves 1 | A scrumptious combo of dosa with potato and masala folded into it, cut into pieces; served with chutneys and sambhar.",
+                          imageId: "b8976ca70c0a52ee893f040e3a45c01e",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 19000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                            portionSize: "Serves 1",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "3.8",
+                              ratingCount: "46 ratings",
+                              ratingCountV2: "46",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#D9EFEC", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_medium",
+                              ratingTextColor: "rating_medium",
+                              ratingCountTextColor: "rating_medium",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998263",
+                          menuFilterIds: ["VEG"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808365",
+                          name: "Rava Masala Dosa With Butter",
+                          category: "South Indian",
+                          description:
+                            "Serves 1 | Tawa- toasted, crispy rava dosa folded in with masala and butter - Super light and Healthy! Usually served with chutney and sambar.",
+                          imageId: "77bb8dcfe78b83c46fd96bd15050aa65",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 17000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                            portionSize: "Serves 1",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.9",
+                              ratingCount: "61 ratings",
+                              ratingCountV2: "61",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998333",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808360",
+                          name: "Cheese Masala Dosa",
+                          category: "South Indian",
+                          description:
+                            "Crispy dosa with a potato filling, topped with cheese and served with sambar and chutney.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/232c1b8e-7891-4cac-bbd9-32575d8d52b7_97189ad1-05db-43de-9914-d69869d9824b.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 18000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "23 ratings",
+                              ratingCountV2: "23",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998265",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808374",
+                          name: "Cheese Sada Dosa",
+                          category: "South Indian",
+                          description:
+                            "Tawa- toasted, crispy dosa with an indulging cheese-spread.",
+                          imageId: "clztwnacznsaxj0ojq03",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 16000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "58 ratings",
+                              ratingCountV2: "58",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998266",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -1993,6 +1785,57 @@ export const menuData = [
                             },
                           },
                           parentId: "38998324",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808390",
+                          name: "Podi Idli",
+                          category: "South Indian",
+                          description:
+                            "Serves 1 | Fluffy and steamed podi idlis topped with flavorsome powder served with 2 types of chutney and sambhar.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 14000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                            portionSize: "Serves 1",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.5",
+                              ratingCount: "111 ratings",
+                              ratingCountV2: "111",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998325",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -2106,16 +1949,14 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "144349347",
-                          name: "Ragi Masala Dosa",
+                          id: "77808380",
+                          name: "Uttappa With Butter",
                           category: "South Indian",
                           description:
-                            "A delectable South Indian delicacy with a nutritious twist, packed with flavors and perfect for any time of day.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2025/1/23/a1f00c20-4c86-4776-8bbb-a79bfdbd8b7d_e85ffd97-283b-43d9-a635-a65a3bf558e7.jpg",
+                            "A delectable South Indian delight topped with a generous dollop of butter, offering a taste of rich and savory flavors.",
                           inStock: 1,
                           isVeg: 1,
-                          price: 13000,
+                          price: 15000,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
@@ -2127,9 +1968,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "12 ratings",
-                              ratingCountV2: "12",
+                              rating: "4.9",
+                              ratingCount: "22 ratings",
+                              ratingCountV2: "22",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -2146,7 +1987,7 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          parentId: "85183020",
+                          parentId: "38998353",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -2208,14 +2049,16 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "77808362",
-                          name: "Masala Dosa With Butter",
+                          id: "144349347",
+                          name: "Ragi Masala Dosa",
                           category: "South Indian",
                           description:
-                            "A semi-spicy, crispy ,buttery and delicious dosa with masala folded into it.",
+                            "A delectable South Indian delicacy with a nutritious twist, packed with flavors and perfect for any time of day.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2025/1/23/a1f00c20-4c86-4776-8bbb-a79bfdbd8b7d_e85ffd97-283b-43d9-a635-a65a3bf558e7.jpg",
                           inStock: 1,
                           isVeg: 1,
-                          price: 15000,
+                          price: 13000,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
@@ -2227,9 +2070,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "5.0",
-                              ratingCount: "12 ratings",
-                              ratingCountV2: "12",
+                              rating: "4.8",
+                              ratingCount: "13 ratings",
+                              ratingCountV2: "13",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -2246,57 +2089,7 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          parentId: "38998307",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808380",
-                          name: "Uttappa With Butter",
-                          category: "South Indian",
-                          description:
-                            "A delectable South Indian delight topped with a generous dollop of butter, offering a taste of rich and savory flavors.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 15000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.9",
-                              ratingCount: "22 ratings",
-                              ratingCountV2: "22",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998353",
+                          parentId: "85183020",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -2360,16 +2153,14 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "77808382",
-                          name: "Plain Uttappa",
+                          id: "77808362",
+                          name: "Masala Dosa With Butter",
                           category: "South Indian",
                           description:
-                            "A delightful and flavorsome South Indian delicacy that will tickle your taste buds.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/6/22/a2925ecd-9feb-4818-93b0-9da0dc7d59dc_fbc19451-7106-401d-80b6-e162132db415.JPG",
+                            "A semi-spicy, crispy ,buttery and delicious dosa with masala folded into it.",
                           inStock: 1,
                           isVeg: 1,
-                          price: 11000,
+                          price: 15000,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
@@ -2381,9 +2172,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "4.0",
-                              ratingCount: "64 ratings",
-                              ratingCountV2: "64",
+                              rating: "5.0",
+                              ratingCount: "12 ratings",
+                              ratingCountV2: "12",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -2400,7 +2191,7 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          parentId: "38998321",
+                          parentId: "38998307",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -2450,10 +2241,8 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
                           parentId: "38998290",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
+                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -2484,10 +2273,58 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {},
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
                           parentId: "38998278",
-                          menuFilterIds: ["BOLT", "VEG"],
+                          menuFilterIds: ["VEG"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808389",
+                          name: "Idli Fried",
+                          category: "South Indian",
+                          description:
+                            "Crispy South Indian delicacy with a hint of tanginess, perfect for a savory indulgence.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 10000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "45 ratings",
+                              ratingCountV2: "45",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998291",
+                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -2550,14 +2387,16 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "77808389",
-                          name: "Idli Fried",
+                          id: "77808382",
+                          name: "Plain Uttappa",
                           category: "South Indian",
                           description:
-                            "Crispy South Indian delicacy with a hint of tanginess, perfect for a savory indulgence.",
+                            "A delightful and flavorsome South Indian delicacy that will tickle your taste buds.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/6/22/a2925ecd-9feb-4818-93b0-9da0dc7d59dc_fbc19451-7106-401d-80b6-e162132db415.JPG",
                           inStock: 1,
                           isVeg: 1,
-                          price: 10000,
+                          price: 11000,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
@@ -2569,9 +2408,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "45 ratings",
-                              ratingCountV2: "45",
+                              rating: "4.0",
+                              ratingCount: "64 ratings",
+                              ratingCountV2: "64",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -2588,10 +2427,8 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998291",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
+                          parentId: "38998321",
+                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -2659,6 +2496,900 @@ export const menuData = [
                 card: {
                   "@type":
                     "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                  title: "We Recommend",
+                  itemCards: [
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808436",
+                          name: "Curd Rice",
+                          category: "We Recommend",
+                          description:
+                            "Creamy comfort food perfect for any meal.",
+                          imageId: "eg9djefzxsx9fbjsqsnh",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 12000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {
+                            text: "Bestseller",
+                            textColor: "#ffffff",
+                            topBackgroundColor: "#d53d4c",
+                            bottomBackgroundColor: "#b02331",
+                          },
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          isBestseller: true,
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.6",
+                              ratingCount: "214 ratings",
+                              ratingCountV2: "214",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "40833711",
+                          menuFilterIds: ["bestseller", "VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808434",
+                          name: "Puri Bhaji",
+                          category: "We Recommend",
+                          description:
+                            "Classic combo of fried puris accompanied with plain boiled potatoes bhaji tempered with curry leaves and mustard seeds!",
+                          imageId: "ckyspvjdlr80d1vtbrzr",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 9000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {
+                            text: "Bestseller",
+                            textColor: "#ffffff",
+                            topBackgroundColor: "#d53d4c",
+                            bottomBackgroundColor: "#b02331",
+                          },
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          isBestseller: true,
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.6",
+                              ratingCount: "256 ratings",
+                              ratingCountV2: "256",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "40833712",
+                          menuFilterIds: ["bestseller", "VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808431",
+                          name: "Dal Rice",
+                          category: "We Recommend",
+                          description:
+                            "A comforting and flavorful blend of lentils and rice, perfect for a satisfying and wholesome vegetarian meal.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/113559f5-b633-466e-8ef3-918582d99434_2b025745-7786-4d46-84bd-09cdade5201d.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 10000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {
+                            text: "Bestseller",
+                            textColor: "#ffffff",
+                            topBackgroundColor: "#d53d4c",
+                            bottomBackgroundColor: "#b02331",
+                          },
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          isBestseller: true,
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.6",
+                              ratingCount: "56 ratings",
+                              ratingCountV2: "56",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "42581125",
+                          menuFilterIds: ["bestseller", "VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808435",
+                          name: "Puri Shrikhand",
+                          category: "We Recommend",
+                          description:
+                            "Classic combo of fried puris accompanied with delicious house special shrikhand.",
+                          imageId: "mytxz0kf5ayot92l4axw",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 16000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "67 ratings",
+                              ratingCountV2: "67",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "41156335",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "113821572",
+                          name: "Chole Bhatura",
+                          category: "We Recommend",
+                          description:
+                            "A flavorful and indulgent Indian delight that brings together soft, fluffy Bhatura bread with rich and aromatic Chole curry.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/25f058df-d054-4024-9fbd-cf3074d65a8c_53a0a9c8-a58a-44a3-82f0-edc5911d5940.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 14000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.4",
+                              ratingCount: "53 ratings",
+                              ratingCountV2: "53",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "65534131",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "131503954",
+                          name: "Rasam Rice",
+                          category: "We Recommend",
+                          description:
+                            "A comforting and flavorful rice dish that will leave you craving for more.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2025/1/23/649f7e7c-a9c5-4fc8-9c98-80fb4809602c_abd70b82-2fe9-4f1f-9603-39d722367f34.jpg",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 10000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.1",
+                              ratingCount: "21 ratings",
+                              ratingCountV2: "21",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "76507929",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "113821571",
+                          name: "Pav Bhaji",
+                          category: "We Recommend",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 14000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.7",
+                              ratingCount: "18 ratings",
+                              ratingCountV2: "18",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "65534133",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808433",
+                          name: "Puri Khurma",
+                          category: "We Recommend",
+                          description:
+                            "Simple yet delicious combo of fried puris accompanied with house special khurma.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 10000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.5",
+                              ratingCount: "61 ratings",
+                              ratingCountV2: "61",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "40793318",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "113821568",
+                          name: "Veg Pulav",
+                          category: "We Recommend",
+                          description:
+                            "A flavorful and aromatic rice dish with a medley of vegetables, perfect to satisfy your cravings.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 13000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.7",
+                              ratingCount: "47 ratings",
+                              ratingCountV2: "47",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "65534136",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808430",
+                          name: "Papad",
+                          category: "We Recommend",
+                          description:
+                            "Crunchy, flavorful, and packed with exotic aromas, this vegetarian delight will leave you craving for more.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 1900,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.3",
+                              ratingCount: "23 ratings",
+                              ratingCountV2: "23",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998318",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808440",
+                          name: "Plate Samber",
+                          category: "We Recommend",
+                          description:
+                            "An irresistible vegetarian delight packed with flavors and delectable taste.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 4000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "252 ratings",
+                              ratingCountV2: "252",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998323",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808429",
+                          name: "Puri Plate",
+                          category: "We Recommend",
+                          description:
+                            "Serves 1 | A delectable and flavorful platter featuring crispy puris alongside a variety of delectable vegetarian delicacies.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 5000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                            portionSize: "Serves 1",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "54 ratings",
+                              ratingCountV2: "54",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "41261139",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808441",
+                          name: "Plate Chatani",
+                          category: "We Recommend",
+                          description:
+                            "A delectable veg specialty bursting with bold and flavorful notes, perfect for those seeking a delightful culinary experience.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 3000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.7",
+                              ratingCount: "163 ratings",
+                              ratingCountV2: "163",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998322",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808439",
+                          name: "Sp. Bhaji",
+                          category: "We Recommend",
+                          description:
+                            "A delectable vegetarian delicacy bursting with bold flavors and aromatic spices.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2025/2/6/248e9e8c-3c42-4c3e-add6-621d4371bce2_31fa03b1-dc24-4b17-b632-70bcc4d87a68.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 6000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.9",
+                              ratingCount: "13 ratings",
+                              ratingCountV2: "13",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "42216547",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808432",
+                          name: "Plain Rice",
+                          category: "We Recommend",
+                          description:
+                            "A wholesome and comforting staple that is the perfect base for any flavorful combination.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/610fdc13-4c0f-4b1b-b498-a8bbb1ea1751_07357e56-756c-4fe0-a82f-c2b5d5f41513.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 6000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.4",
+                              ratingCount: "6 ratings",
+                              ratingCountV2: "6",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "45166606",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808437",
+                          name: "Potato Bhaji",
+                          category: "We Recommend",
+                          description:
+                            "A flavorful and satisfying vegetable dish bursting with rich and aromatic flavors.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 4000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.4",
+                              ratingCount: "115 ratings",
+                              ratingCountV2: "115",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998326",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808438",
+                          name: "Khurma",
+                          category: "We Recommend",
+                          description:
+                            "A delectable and flavorful vegetable delicacy crafted with utmost care to tantalize your taste buds.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 6000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "19 ratings",
+                              ratingCountV2: "19",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "43004353",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                  ],
+                  subtitleSuffix: {},
+                  image: "eg9djefzxsx9fbjsqsnh",
+                  categoryId: "17585294",
+                },
+              },
+            },
+            {
+              card: {
+                card: {
+                  "@type":
+                    "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
                   title: "Sandwiches & Toasts",
                   itemCards: [
                     {
@@ -2687,9 +3418,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "141 ratings",
-                              ratingCountV2: "141",
+                              rating: "4.7",
+                              ratingCount: "142 ratings",
+                              ratingCountV2: "142",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -2708,60 +3439,6 @@ export const menuData = [
                           },
                           parentId: "38998261",
                           menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808406",
-                          name: "Cheese Sandwiches",
-                          category: "Sandwiches & Toasts",
-                          description:
-                            "Deliciously cheesy sandwiches that are perfect for a quick and satisfying veggie meal.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/6/22/6e9b5dc7-260a-4766-94d3-dea2f3592938_c8c147fc-71e0-4d7f-b6a3-be90942c2cd5.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 13000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "49 ratings",
-                              ratingCountV2: "49",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998267",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -2824,16 +3501,16 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "77808407",
-                          name: "Cheese Grilled Sandwiches",
+                          id: "77808406",
+                          name: "Cheese Sandwiches",
                           category: "Sandwiches & Toasts",
                           description:
-                            "A classic favorite packed with melted cheese and grilled to perfection.",
+                            "Deliciously cheesy sandwiches that are perfect for a quick and satisfying veggie meal.",
                           imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/c4fd6684-3d20-4352-a131-4799ada1d7cb_63b39fc3-b74d-4b09-be06-01c683483da8.JPG",
+                            "FOOD_CATALOG/IMAGES/CMS/2024/6/22/6e9b5dc7-260a-4766-94d3-dea2f3592938_c8c147fc-71e0-4d7f-b6a3-be90942c2cd5.JPG",
                           inStock: 1,
                           isVeg: 1,
-                          price: 17000,
+                          price: 13000,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
@@ -2845,9 +3522,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "5.0",
-                              ratingCount: "15 ratings",
-                              ratingCountV2: "15",
+                              rating: "4.7",
+                              ratingCount: "49 ratings",
+                              ratingCountV2: "49",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -2864,7 +3541,7 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          parentId: "38998264",
+                          parentId: "38998267",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -2928,6 +3605,58 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
+                          id: "77808407",
+                          name: "Cheese Grilled Sandwiches",
+                          category: "Sandwiches & Toasts",
+                          description:
+                            "A classic favorite packed with melted cheese and grilled to perfection.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/c4fd6684-3d20-4352-a131-4799ada1d7cb_63b39fc3-b74d-4b09-be06-01c683483da8.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 17000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "5.0",
+                              ratingCount: "15 ratings",
+                              ratingCountV2: "15",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998264",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
                           id: "77808420",
                           name: "Veg Grilled Sandwich",
                           category: "Sandwiches & Toasts",
@@ -2968,58 +3697,6 @@ export const menuData = [
                             },
                           },
                           parentId: "116876090",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808411",
-                          name: "Jam Toast",
-                          category: "Sandwiches & Toasts",
-                          description:
-                            "A delightful and flavorful vegetarian sandwich that will satisfy your taste buds.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/19b708b6-3400-474f-b034-272d45ed28d3_e648e656-f686-44b7-9018-3db300f63794.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 9000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.9",
-                              ratingCount: "16 ratings",
-                              ratingCountV2: "16",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998297",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -3156,19 +3833,19 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "3.9",
-                              ratingCount: "22 ratings",
-                              ratingCountV2: "22",
+                              rating: "4.3",
+                              ratingCount: "24 ratings",
+                              ratingCountV2: "24",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
-                                colours: ["#D9EFEC", "#00FFFFFF"],
+                                colours: ["#C8F9E5", "#00FFFFFF"],
                                 gradientDirection:
                                   "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
                               },
-                              ratingIconColor: "rating_medium",
-                              ratingTextColor: "rating_medium",
-                              ratingCountTextColor: "rating_medium",
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
                               ratingFontName:
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                               ratingCountFontName:
@@ -3176,7 +3853,59 @@ export const menuData = [
                             },
                           },
                           parentId: "38998348",
-                          menuFilterIds: ["VEG"],
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808409",
+                          name: "Bread Butter",
+                          category: "Sandwiches & Toasts",
+                          description:
+                            "A classic, flavorful combination of irresistible bread and creamy butter that satisfies all Sandwiches & Toasts cravings.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/fcb4572f-9d3c-4204-b42c-79a31606e113_0cfbdd2b-3487-45a9-b523-bc50c01da488.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 7000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "5.0",
+                              ratingCount: "115 ratings",
+                              ratingCountV2: "115",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998257",
+                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -3228,10 +3957,8 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
                           parentId: "38998351",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
+                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -3242,16 +3969,16 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "77808412",
-                          name: "Veg Club Sandwiches",
+                          id: "77808411",
+                          name: "Jam Toast",
                           category: "Sandwiches & Toasts",
                           description:
-                            "A delightful combination of fresh vegetables layered between slices of bread, delivering a harmonious explosion of flavors in every bite.",
+                            "A delightful and flavorful vegetarian sandwich that will satisfy your taste buds.",
                           imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/3a8d9117-5a5c-4ae4-a13f-5c47344e12b1_ce883de2-8a0e-4865-b8d9-a576f7a627eb.JPG",
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/19b708b6-3400-474f-b034-272d45ed28d3_e648e656-f686-44b7-9018-3db300f63794.JPG",
                           inStock: 1,
                           isVeg: 1,
-                          price: 11000,
+                          price: 9000,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
@@ -3263,27 +3990,79 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "3.7",
-                              ratingCount: "17 ratings",
-                              ratingCountV2: "17",
+                              rating: "4.9",
+                              ratingCount: "16 ratings",
+                              ratingCountV2: "16",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
-                                colours: ["#D9EFEC", "#00FFFFFF"],
+                                colours: ["#C8F9E5", "#00FFFFFF"],
                                 gradientDirection:
                                   "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
                               },
-                              ratingIconColor: "rating_medium",
-                              ratingTextColor: "rating_medium",
-                              ratingCountTextColor: "rating_medium",
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
                               ratingFontName:
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                               ratingCountFontName:
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          parentId: "38998358",
-                          menuFilterIds: ["VEG"],
+                          parentId: "38998297",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808410",
+                          name: "Toast Butter",
+                          category: "Sandwiches & Toasts",
+                          description:
+                            "A melt-in-your-mouth delight, this classic toast is generously slathered with creamy butter, creating a comforting symphony of flavors.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/4f0db1af-217b-4d5c-bd94-68b61d71113d_d04a3bca-68c0-44a3-b0c1-2a0314237f83.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 9000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.6",
+                              ratingCount: "37 ratings",
+                              ratingCountV2: "37",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998346",
+                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -3344,20 +4123,21 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "77808410",
-                          name: "Toast Butter",
+                          id: "77808401",
+                          name: "Veg Sandwiches",
                           category: "Sandwiches & Toasts",
                           description:
-                            "A melt-in-your-mouth delight, this classic toast is generously slathered with creamy butter, creating a comforting symphony of flavors.",
+                            "Serves 1 | Delicious and satisfying sandwiches filled with fresh, flavorful vegetables.",
                           imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/4f0db1af-217b-4d5c-bd94-68b61d71113d_d04a3bca-68c0-44a3-b0c1-2a0314237f83.JPG",
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/003b5a8a-2229-4183-96ab-48b5910348d3_7c10a56b-7998-40d5-8c56-cd8317d672b1.JPG",
                           inStock: 1,
                           isVeg: 1,
-                          price: 9000,
+                          price: 8000,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
                             vegClassifier: "VEG",
+                            portionSize: "Serves 1",
                           },
                           ribbon: {},
                           type: "ITEM",
@@ -3366,8 +4146,8 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {
                               rating: "4.6",
-                              ratingCount: "37 ratings",
-                              ratingCountV2: "37",
+                              ratingCount: "77 ratings",
+                              ratingCountV2: "77",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -3384,10 +4164,94 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998346",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
+                          parentId: "38998360",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808416",
+                          name: "Jam Club Sandwiches",
+                          category: "Sandwiches & Toasts",
+                          description:
+                            "Delight in a delectable fusion of fruity jam and savory goodness, layered between toasted bread slices and bursting with irresistible flavors.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2025/1/17/c126d315-12f5-4c0e-b166-fbb8045cb288_1f5bcaff-3250-491e-b4f0-bfa0a872b815.jpg",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 11000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {},
+                          },
+                          parentId: "38998295",
+                          menuFilterIds: ["VEG"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808412",
+                          name: "Veg Club Sandwiches",
+                          category: "Sandwiches & Toasts",
+                          description:
+                            "A delightful combination of fresh vegetables layered between slices of bread, delivering a harmonious explosion of flavors in every bite.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/3a8d9117-5a5c-4ae4-a13f-5c47344e12b1_ce883de2-8a0e-4865-b8d9-a576f7a627eb.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 11000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "3.5",
+                              ratingCount: "18 ratings",
+                              ratingCountV2: "18",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#D9EFEC", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_medium",
+                              ratingTextColor: "rating_medium",
+                              ratingCountTextColor: "rating_medium",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998358",
+                          menuFilterIds: ["VEG"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -3439,147 +4303,6 @@ export const menuData = [
                             },
                           },
                           parentId: "38998347",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808416",
-                          name: "Jam Club Sandwiches",
-                          category: "Sandwiches & Toasts",
-                          description:
-                            "Delight in a delectable fusion of fruity jam and savory goodness, layered between toasted bread slices and bursting with irresistible flavors.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2025/1/17/c126d315-12f5-4c0e-b166-fbb8045cb288_1f5bcaff-3250-491e-b4f0-bfa0a872b815.jpg",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 11000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {},
-                          },
-                          parentId: "38998295",
-                          menuFilterIds: ["VEG"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808401",
-                          name: "Veg Sandwiches",
-                          category: "Sandwiches & Toasts",
-                          description:
-                            "Serves 1 | Delicious and satisfying sandwiches filled with fresh, flavorful vegetables.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/003b5a8a-2229-4183-96ab-48b5910348d3_7c10a56b-7998-40d5-8c56-cd8317d672b1.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 8000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                            portionSize: "Serves 1",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "76 ratings",
-                              ratingCountV2: "76",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998360",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808409",
-                          name: "Bread Butter",
-                          category: "Sandwiches & Toasts",
-                          description:
-                            "A classic, flavorful combination of irresistible bread and creamy butter that satisfies all Sandwiches & Toasts cravings.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/fcb4572f-9d3c-4204-b42c-79a31606e113_0cfbdd2b-3487-45a9-b523-bc50c01da488.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 7000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "5.0",
-                              ratingCount: "114 ratings",
-                              ratingCountV2: "114",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998257",
                           menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
@@ -3651,8 +4374,694 @@ export const menuData = [
                 card: {
                   "@type":
                     "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                  title: "Shakes",
+                  itemCards: [
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808458",
+                          name: "Cold Coffee",
+                          category: "Shakes",
+                          description:
+                            "A cold, frothy, refreshing drink made by combining milk, coffee, sugar and ice and shaken to frothy perfection.",
+                          imageId: "mapmbqfbmstrgdcivqps",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 13000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.5",
+                              ratingCount: "36 ratings",
+                              ratingCountV2: "36",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998274",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808454",
+                          name: "Mango Shake",
+                          category: "Shakes",
+                          description:
+                            "Enjoy the refreshing taste of this luscious, fruity shake that blends rich, creamy flavors with the tropical sensation of fresh mango.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 18000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.4",
+                              ratingCount: "16 ratings",
+                              ratingCountV2: "16",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998305",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808464",
+                          name: "Chocolate Shake",
+                          category: "Shakes",
+                          description:
+                            "Indulge in the rich and velvety goodness of a delectable chocolate shake.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 15000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "8 ratings",
+                              ratingCountV2: "8",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998272",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808463",
+                          name: "Strawberry Shake",
+                          category: "Shakes",
+                          description:
+                            "A refreshing and creamy fruity delight that will quench your thirst and satisfy your sweet cravings.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 14000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {},
+                          },
+                          parentId: "38998343",
+                          menuFilterIds: ["VEG"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808465",
+                          name: "Cold Bournvita",
+                          category: "Shakes",
+                          description:
+                            "A refreshing and creamy shake packed with flavor, perfect for chocolate lovers.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/aaa578cb-b3dc-4a1f-9a75-a04bc16bca2c_4c0c91c6-ecdd-46f0-8a9e-fe1944482308.JPG",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 14000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.9",
+                              ratingCount: "9 ratings",
+                              ratingCountV2: "9",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998273",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808459",
+                          name: "Cold Coffee With Ice Cream",
+                          category: "Shakes",
+                          description:
+                            "Indulge in the perfect harmony of creamy ice cream and refreshing cold coffee for a heavenly shake.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 14000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {},
+                          },
+                          parentId: "38998275",
+                          menuFilterIds: ["VEG"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808462",
+                          name: "Mix Fruit Shake",
+                          category: "Shakes",
+                          description:
+                            "A refreshing blend of assorted fruits in a delightful shake.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 14000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.9",
+                              ratingCount: "5 ratings",
+                              ratingCountV2: "5",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998309",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808452",
+                          name: "Chikku Shake",
+                          category: "Shakes",
+                          description:
+                            "Serves 1 | Creamy and refreshing shake made with a delightful blend of fresh fruit flavors.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 14000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                            portionSize: "Serves 1",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "5.0",
+                              ratingCount: "9 ratings",
+                              ratingCountV2: "9",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998271",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808456",
+                          name: "Apple Shake",
+                          category: "Shakes",
+                          description:
+                            "A creamy and refreshing blend of apples, perfect for a delightful and guilt-free treat.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 13000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {},
+                          },
+                          parentId: "38998255",
+                          menuFilterIds: ["VEG"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808460",
+                          name: "Mango Lassi",
+                          category: "Shakes",
+                          description:
+                            "A refreshing, tropical delight perfect for any occasion.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 12000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "7 ratings",
+                              ratingCountV2: "7",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998304",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808455",
+                          name: "Rose Shake",
+                          category: "Shakes",
+                          description:
+                            "Indulge in the fragrant allure of our delightful Rose Shake, a tantalizing treat for shake lovers.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 12000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {},
+                          },
+                          parentId: "38998335",
+                          menuFilterIds: ["VEG"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808453",
+                          name: "Vanilla Shake",
+                          category: "Shakes",
+                          description:
+                            "A creamy and velvety indulgence that perfectly balances the rich sweetness of vanilla, creating a refreshing shake.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 11000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "5 ratings",
+                              ratingCountV2: "5",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998354",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808461",
+                          name: "Banana Shake",
+                          category: "Shakes",
+                          description:
+                            "A sweetend drink made by blending ripped bananas, milk, ice cream, flavorings and a sweetener.",
+                          imageId: "vkdpstzktiweygfc10tl",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 10000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "3.8",
+                              ratingCount: "4 ratings",
+                              ratingCountV2: "4",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#D9EFEC", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_medium",
+                              ratingTextColor: "rating_medium",
+                              ratingCountTextColor: "rating_medium",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998256",
+                          menuFilterIds: ["VEG"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808457",
+                          name: "Vanilla Shake With Ice Cream",
+                          category: "Shakes",
+                          description:
+                            "A creamy and indulgent vanilla shake combined with velvety ice cream for a heavenly treat.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 13000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {},
+                          },
+                          parentId: "38998355",
+                          menuFilterIds: ["VEG"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                  ],
+                  subtitleSuffix: {},
+                  image: "mapmbqfbmstrgdcivqps",
+                  categoryId: "17585298",
+                },
+              },
+            },
+            {
+              card: {
+                card: {
+                  "@type":
+                    "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
                   title: "Snacks",
                   itemCards: [
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "77808394",
+                          name: "Dahi Wada",
+                          category: "Snacks",
+                          description:
+                            "A Lip smacking chat made with fried urad dal vadas, topped with chilled sweetened curd and mouth watering chutneys and chat masalas!",
+                          imageId: "njwpqd3x4l3ca1vuhhiu",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 14000,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {
+                            text: "Bestseller",
+                            textColor: "#ffffff",
+                            topBackgroundColor: "#d53d4c",
+                            bottomBackgroundColor: "#b02331",
+                          },
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          isBestseller: true,
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "368 ratings",
+                              ratingCountV2: "368",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998279",
+                          menuFilterIds: ["bestseller", "VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
                     {
                       card: {
                         "@type":
@@ -3685,8 +5094,8 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {
                               rating: "4.5",
-                              ratingCount: "799 ratings",
-                              ratingCountV2: "799",
+                              ratingCount: "800 ratings",
+                              ratingCountV2: "800",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -3705,57 +5114,6 @@ export const menuData = [
                           },
                           parentId: "38998359",
                           menuFilterIds: ["bestseller", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808394",
-                          name: "Dahi Wada",
-                          category: "Snacks",
-                          description:
-                            "A Lip smacking chat made with fried urad dal vadas, topped with chilled sweetened curd and mouth watering chutneys and chat masalas!",
-                          imageId: "njwpqd3x4l3ca1vuhhiu",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 14000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "366 ratings",
-                              ratingCountV2: "366",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998279",
-                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -3938,21 +5296,15 @@ export const menuData = [
                             vegClassifier: "VEG",
                             portionSize: "Serves 1",
                           },
-                          ribbon: {
-                            text: "Bestseller",
-                            textColor: "#ffffff",
-                            topBackgroundColor: "#d53d4c",
-                            bottomBackgroundColor: "#b02331",
-                          },
+                          ribbon: {},
                           type: "ITEM",
                           itemBadge: {},
                           badgesV2: {},
-                          isBestseller: true,
                           ratings: {
                             aggregatedRating: {
                               rating: "4.8",
-                              ratingCount: "1146 ratings",
-                              ratingCountV2: "1.1K+",
+                              ratingCount: "1154 ratings",
+                              ratingCountV2: "1.2K+",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -3969,7 +5321,13 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          menuFilterIds: ["bestseller", "VEG", "toprated"],
+                          imageBadges: [
+                            {
+                              imageId: "Low%20cal/Low%20cal%201_1.png",
+                            },
+                          ],
+                          parentId: "46260962",
+                          menuFilterIds: ["EATRIGHT", "VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -4001,8 +5359,8 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {
                               rating: "4.8",
-                              ratingCount: "183 ratings",
-                              ratingCountV2: "183",
+                              ratingCount: "184 ratings",
+                              ratingCountV2: "184",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -4033,2039 +5391,8 @@ export const menuData = [
                     },
                   ],
                   subtitleSuffix: {},
-                  image: "anszqjdwfxp7r47icfz1",
+                  image: "njwpqd3x4l3ca1vuhhiu",
                   categoryId: "17585291",
-                },
-              },
-            },
-            {
-              card: {
-                card: {
-                  "@type":
-                    "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
-                  title: "We Recommend",
-                  itemCards: [
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808431",
-                          name: "Dal Rice",
-                          category: "We Recommend",
-                          description:
-                            "A comforting and flavorful blend of lentils and rice, perfect for a satisfying and wholesome vegetarian meal.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/113559f5-b633-466e-8ef3-918582d99434_2b025745-7786-4d46-84bd-09cdade5201d.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 10000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "55 ratings",
-                              ratingCountV2: "55",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "42581125",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808440",
-                          name: "Plate Samber",
-                          category: "We Recommend",
-                          description:
-                            "An irresistible vegetarian delight packed with flavors and delectable taste.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 4000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "252 ratings",
-                              ratingCountV2: "252",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998323",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "113821568",
-                          name: "Veg Pulav",
-                          category: "We Recommend",
-                          description:
-                            "A flavorful and aromatic rice dish with a medley of vegetables, perfect to satisfy your cravings.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 13000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "46 ratings",
-                              ratingCountV2: "46",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "65534136",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808441",
-                          name: "Plate Chatani",
-                          category: "We Recommend",
-                          description:
-                            "A delectable veg specialty bursting with bold and flavorful notes, perfect for those seeking a delightful culinary experience.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 3000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "163 ratings",
-                              ratingCountV2: "163",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998322",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "131503954",
-                          name: "Rasam Rice",
-                          category: "We Recommend",
-                          description:
-                            "A comforting and flavorful rice dish that will leave you craving for more.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2025/1/23/649f7e7c-a9c5-4fc8-9c98-80fb4809602c_abd70b82-2fe9-4f1f-9603-39d722367f34.jpg",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 10000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "3.8",
-                              ratingCount: "20 ratings",
-                              ratingCountV2: "20",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#D9EFEC", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_medium",
-                              ratingTextColor: "rating_medium",
-                              ratingCountTextColor: "rating_medium",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "76507929",
-                          menuFilterIds: ["BOLT", "VEG"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808437",
-                          name: "Potato Bhaji",
-                          category: "We Recommend",
-                          description:
-                            "A flavorful and satisfying vegetable dish bursting with rich and aromatic flavors.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 4000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.4",
-                              ratingCount: "115 ratings",
-                              ratingCountV2: "115",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998326",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808439",
-                          name: "Sp. Bhaji",
-                          category: "We Recommend",
-                          description:
-                            "A delectable vegetarian delicacy bursting with bold flavors and aromatic spices.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2025/2/6/248e9e8c-3c42-4c3e-add6-621d4371bce2_31fa03b1-dc24-4b17-b632-70bcc4d87a68.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 6000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.9",
-                              ratingCount: "13 ratings",
-                              ratingCountV2: "13",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "42216547",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808429",
-                          name: "Puri Plate",
-                          category: "We Recommend",
-                          description:
-                            "Serves 1 | A delectable and flavorful platter featuring crispy puris alongside a variety of delectable vegetarian delicacies.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 5000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                            portionSize: "Serves 1",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "54 ratings",
-                              ratingCountV2: "54",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "41261139",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808432",
-                          name: "Plain Rice",
-                          category: "We Recommend",
-                          description:
-                            "A wholesome and comforting staple that is the perfect base for any flavorful combination.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/610fdc13-4c0f-4b1b-b498-a8bbb1ea1751_07357e56-756c-4fe0-a82f-c2b5d5f41513.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 6000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.4",
-                              ratingCount: "6 ratings",
-                              ratingCountV2: "6",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "45166606",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808438",
-                          name: "Khurma",
-                          category: "We Recommend",
-                          description:
-                            "A delectable and flavorful vegetable delicacy crafted with utmost care to tantalize your taste buds.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 6000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "19 ratings",
-                              ratingCountV2: "19",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "43004353",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808430",
-                          name: "Papad",
-                          category: "We Recommend",
-                          description:
-                            "Crunchy, flavorful, and packed with exotic aromas, this vegetarian delight will leave you craving for more.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 1900,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.3",
-                              ratingCount: "23 ratings",
-                              ratingCountV2: "23",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998318",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808435",
-                          name: "Puri Shrikhand",
-                          category: "We Recommend",
-                          description:
-                            "Classic combo of fried puris accompanied with delicious house special shrikhand.",
-                          imageId: "mytxz0kf5ayot92l4axw",
-                          isVeg: 1,
-                          price: 16000,
-                          variants: {},
-                          variantsV2: {},
-                          nextAvailableAtMessage:
-                            "Next available at 10:30 am, today",
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "66 ratings",
-                              ratingCountV2: "66",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "41156335",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "113821571",
-                          name: "Pav Bhaji",
-                          category: "We Recommend",
-                          isVeg: 1,
-                          price: 14000,
-                          variants: {},
-                          variantsV2: {},
-                          nextAvailableAtMessage:
-                            "Next available at 12 noon, today",
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "18 ratings",
-                              ratingCountV2: "18",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "65534133",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "113821572",
-                          name: "Chole Bhatura",
-                          category: "We Recommend",
-                          description:
-                            "A flavorful and indulgent Indian delight that brings together soft, fluffy Bhatura bread with rich and aromatic Chole curry.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/25f058df-d054-4024-9fbd-cf3074d65a8c_53a0a9c8-a58a-44a3-82f0-edc5911d5940.JPG",
-                          isVeg: 1,
-                          price: 14000,
-                          variants: {},
-                          variantsV2: {},
-                          nextAvailableAtMessage:
-                            "Next available at 12 noon, today",
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.4",
-                              ratingCount: "53 ratings",
-                              ratingCountV2: "53",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "65534131",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808436",
-                          name: "Curd Rice",
-                          category: "We Recommend",
-                          description:
-                            "Creamy comfort food perfect for any meal.",
-                          imageId: "eg9djefzxsx9fbjsqsnh",
-                          isVeg: 1,
-                          price: 12000,
-                          variants: {},
-                          variantsV2: {},
-                          nextAvailableAtMessage:
-                            "Next available at 10:45 am, today",
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "213 ratings",
-                              ratingCountV2: "213",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "40833711",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808434",
-                          name: "Puri Bhaji",
-                          category: "We Recommend",
-                          description:
-                            "Classic combo of fried puris accompanied with plain boiled potatoes bhaji tempered with curry leaves and mustard seeds!",
-                          imageId: "ckyspvjdlr80d1vtbrzr",
-                          isVeg: 1,
-                          price: 9000,
-                          variants: {},
-                          variantsV2: {},
-                          nextAvailableAtMessage:
-                            "Next available at 10:30 am, today",
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "255 ratings",
-                              ratingCountV2: "255",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "40833712",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808433",
-                          name: "Puri Khurma",
-                          category: "We Recommend",
-                          description:
-                            "Simple yet delicious combo of fried puris accompanied with house special khurma.",
-                          isVeg: 1,
-                          price: 10000,
-                          variants: {},
-                          variantsV2: {},
-                          nextAvailableAtMessage:
-                            "Next available at 10:30 am, today",
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.5",
-                              ratingCount: "61 ratings",
-                              ratingCountV2: "61",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "40793318",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                  ],
-                  subtitleSuffix: {},
-                  image:
-                    "FOOD_CATALOG/IMAGES/CMS/2024/8/27/113559f5-b633-466e-8ef3-918582d99434_2b025745-7786-4d46-84bd-09cdade5201d.JPG",
-                  categoryId: "17585294",
-                },
-              },
-            },
-            {
-              card: {
-                card: {
-                  "@type":
-                    "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
-                  title: "Breakfast Bestsellers",
-                  itemCards: [
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145741809",
-                          name: "Idli Sambar Chatni                     ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "Super-soft steamed idli - the perfect way to kickstart your day. (Served with Sambar and Chutney)",
-                          imageId: "zcxaj69iddbb1pf6kpg8",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 8000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {
-                            text: "Bestseller",
-                            textColor: "#ffffff",
-                            topBackgroundColor: "#d53d4c",
-                            bottomBackgroundColor: "#b02331",
-                          },
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          isBestseller: true,
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "2566 ratings",
-                              ratingCountV2: "2.6K+",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998293",
-                          menuFilterIds: [
-                            "BOLT",
-                            "bestseller",
-                            "VEG",
-                            "toprated",
-                          ],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145741824",
-                          name: "Sada Dosa                     ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "Tawa- toasted, crispy dosas made from rice batter.",
-                          imageId: "nbqyct13ucbwfjgcznyk",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 9000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "500 ratings",
-                              ratingCountV2: "500",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998337",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145745313",
-                          name: "Wada Sambar Chatni                                    ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "Deep fried savoury snack, made from urad dal and other spices.(Served With Sambar and Chutney)",
-                          imageId: "nz9cfmwkdq1sizbuyop0",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 9000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "1488 ratings",
-                              ratingCountV2: "1.5K+",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998361",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145741828",
-                          name: "Onion Uttappa                     ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "An interesting spin on the dosa with onions mixed into the dosa batter and spread to a thick consistency",
-                          imageId: "exzofvueqoo05w8daaum",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 12000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "1152 ratings",
-                              ratingCountV2: "1.2K+",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998317",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145741825",
-                          name: "Potato Wada Chatni Sambar                     ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "Delicious lip-smacking Potato vadas served with Chutney and Sambar.",
-                          imageId: "dau9bsevtrshjejxthfw",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 8000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "692 ratings",
-                              ratingCountV2: "692",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998327",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145741817",
-                          name: "Idli Wada Sambar                     ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "A classic and delicious combo from South with your go to dish idli and crunchy crispy vada served with chutney and sambhar.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 10000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.7",
-                              ratingCount: "651 ratings",
-                              ratingCountV2: "651",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998294",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145741819",
-                          name: "Veg Cutlet                     ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "Deep-fried mixed vegetable patty with a strong undertone of flavorful Indian masala.",
-                          imageId: "nnxjkhsnaiqkcitojm1v",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 11000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.5",
-                              ratingCount: "799 ratings",
-                              ratingCountV2: "799",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998359",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145741821",
-                          name: "Masala Dosa                     ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "A semi-spicy, crispy and delicious dosa with masala folded into it.",
-                          imageId: "xljvwxzldaocfxf1qpvz",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 11000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.6",
-                              ratingCount: "856 ratings",
-                              ratingCountV2: "856",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998306",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "145741811",
-                          name: "Upma                     ",
-                          category: "Breakfast Bestsellers",
-                          description:
-                            "A tasty dish made from rava cooked with vegetables and select Indian spices.",
-                          imageId: "anszqjdwfxp7r47icfz1",
-                          isVeg: 1,
-                          price: 5700,
-                          variants: {},
-                          variantsV2: {},
-                          nextAvailableAtMessage:
-                            "Next available at 7 am, tomorrow",
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "1145 ratings",
-                              ratingCountV2: "1.1K+",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          imageBadges: [
-                            {
-                              imageId: "Low%20cal/Low%20cal%201_1.png",
-                            },
-                          ],
-                          parentId: "46260962",
-                          menuFilterIds: ["EATRIGHT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                  ],
-                  subtitleSuffix: {},
-                  image: "zcxaj69iddbb1pf6kpg8",
-                  categoryId: "50306690",
-                },
-              },
-            },
-            {
-              card: {
-                card: {
-                  "@type":
-                    "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
-                  title: "Shakes",
-                  itemCards: [
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808454",
-                          name: "Mango Shake",
-                          category: "Shakes",
-                          description:
-                            "Enjoy the refreshing taste of this luscious, fruity shake that blends rich, creamy flavors with the tropical sensation of fresh mango.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 18000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.4",
-                              ratingCount: "16 ratings",
-                              ratingCountV2: "16",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998305",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808458",
-                          name: "Cold Coffee",
-                          category: "Shakes",
-                          description:
-                            "A cold, frothy, refreshing drink made by combining milk, coffee, sugar and ice and shaken to frothy perfection.",
-                          imageId: "mapmbqfbmstrgdcivqps",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 13000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.5",
-                              ratingCount: "36 ratings",
-                              ratingCountV2: "36",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998274",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808464",
-                          name: "Chocolate Shake",
-                          category: "Shakes",
-                          description:
-                            "Indulge in the rich and velvety goodness of a delectable chocolate shake.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 15000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "8 ratings",
-                              ratingCountV2: "8",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998272",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808462",
-                          name: "Mix Fruit Shake",
-                          category: "Shakes",
-                          description:
-                            "A refreshing blend of assorted fruits in a delightful shake.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 14000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.9",
-                              ratingCount: "5 ratings",
-                              ratingCountV2: "5",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998309",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808465",
-                          name: "Cold Bournvita",
-                          category: "Shakes",
-                          description:
-                            "A refreshing and creamy shake packed with flavor, perfect for chocolate lovers.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/aaa578cb-b3dc-4a1f-9a75-a04bc16bca2c_4c0c91c6-ecdd-46f0-8a9e-fe1944482308.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 14000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.9",
-                              ratingCount: "9 ratings",
-                              ratingCountV2: "9",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998273",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808459",
-                          name: "Cold Coffee With Ice Cream",
-                          category: "Shakes",
-                          description:
-                            "Indulge in the perfect harmony of creamy ice cream and refreshing cold coffee for a heavenly shake.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 14000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {},
-                          },
-                          parentId: "38998275",
-                          menuFilterIds: ["VEG"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808463",
-                          name: "Strawberry Shake",
-                          category: "Shakes",
-                          description:
-                            "A refreshing and creamy fruity delight that will quench your thirst and satisfy your sweet cravings.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 14000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {},
-                          },
-                          parentId: "38998343",
-                          menuFilterIds: ["VEG"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808452",
-                          name: "Chikku Shake",
-                          category: "Shakes",
-                          description:
-                            "Serves 1 | Creamy and refreshing shake made with a delightful blend of fresh fruit flavors.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 14000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                            portionSize: "Serves 1",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "5.0",
-                              ratingCount: "9 ratings",
-                              ratingCountV2: "9",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998271",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808456",
-                          name: "Apple Shake",
-                          category: "Shakes",
-                          description:
-                            "A creamy and refreshing blend of apples, perfect for a delightful and guilt-free treat.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 13000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {},
-                          },
-                          parentId: "38998255",
-                          menuFilterIds: ["VEG"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808455",
-                          name: "Rose Shake",
-                          category: "Shakes",
-                          description:
-                            "Indulge in the fragrant allure of our delightful Rose Shake, a tantalizing treat for shake lovers.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 12000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {},
-                          },
-                          parentId: "38998335",
-                          menuFilterIds: ["VEG"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808460",
-                          name: "Mango Lassi",
-                          category: "Shakes",
-                          description:
-                            "A refreshing, tropical delight perfect for any occasion.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 12000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.5",
-                              ratingCount: "6 ratings",
-                              ratingCountV2: "6",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          parentId: "38998304",
-                          menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808453",
-                          name: "Vanilla Shake",
-                          category: "Shakes",
-                          description:
-                            "A creamy and velvety indulgence that perfectly balances the rich sweetness of vanilla, creating a refreshing shake.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 11000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "5 ratings",
-                              ratingCountV2: "5",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998354",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808461",
-                          name: "Banana Shake",
-                          category: "Shakes",
-                          description:
-                            "A sweetend drink made by blending ripped bananas, milk, ice cream, flavorings and a sweetener.",
-                          imageId: "vkdpstzktiweygfc10tl",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 10000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "3.8",
-                              ratingCount: "4 ratings",
-                              ratingCountV2: "4",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#D9EFEC", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_medium",
-                              ratingTextColor: "rating_medium",
-                              ratingCountTextColor: "rating_medium",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998256",
-                          menuFilterIds: ["BOLT", "VEG"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808457",
-                          name: "Vanilla Shake With Ice Cream",
-                          category: "Shakes",
-                          description:
-                            "A creamy and indulgent vanilla shake combined with velvety ice cream for a heavenly treat.",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 13000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {},
-                          },
-                          parentId: "38998355",
-                          menuFilterIds: ["VEG"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                  ],
-                  subtitleSuffix: {},
-                  image: "mapmbqfbmstrgdcivqps",
-                  categoryId: "17585298",
                 },
               },
             },
@@ -6109,8 +5436,8 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {
                               rating: "4.8",
-                              ratingCount: "882 ratings",
-                              ratingCountV2: "882",
+                              ratingCount: "888 ratings",
+                              ratingCountV2: "888",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -6127,6 +5454,7 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
+                          parentId: "38998281",
                           menuFilterIds: ["bestseller", "VEG", "toprated"],
                         },
                         analytics: {},
@@ -6179,10 +5507,8 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
                           parentId: "38998344",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
+                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -6409,6 +5735,56 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
+                          id: "77808447",
+                          name: "Butter Milk",
+                          category: "Cold Beverages",
+                          description:
+                            "A refreshing and creamy blend, perfect for cooling down on a warm day or as a delightful thirst-quencher.",
+                          inStock: 1,
+                          isVeg: 1,
+                          price: 5500,
+                          variants: {},
+                          variantsV2: {},
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.3",
+                              ratingCount: "65 ratings",
+                              ratingCountV2: "65",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998258",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
                           id: "77808445",
                           name: "Lassi Salted",
                           category: "Cold Beverages",
@@ -6449,60 +5825,6 @@ export const menuData = [
                           },
                           parentId: "38998300",
                           menuFilterIds: ["VEG", "toprated"],
-                        },
-                        analytics: {},
-                        hideRestaurantDetails: true,
-                      },
-                    },
-                    {
-                      card: {
-                        "@type":
-                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-                        info: {
-                          id: "77808446",
-                          name: "Lime Juice",
-                          category: "Cold Beverages",
-                          description:
-                            "Refreshing and tangy lime juice that will quench your thirst on a sunny day.",
-                          imageId:
-                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/b2dcaa22-d2ea-490c-956b-534564c002ae_f7256fcc-c33e-4c99-bebf-49af31566409.JPG",
-                          inStock: 1,
-                          isVeg: 1,
-                          price: 6000,
-                          variants: {},
-                          variantsV2: {},
-                          itemAttribute: {
-                            vegClassifier: "VEG",
-                          },
-                          ribbon: {},
-                          type: "ITEM",
-                          itemBadge: {},
-                          badgesV2: {},
-                          ratings: {
-                            aggregatedRating: {
-                              rating: "4.9",
-                              ratingCount: "6 ratings",
-                              ratingCountV2: "6",
-                            },
-                            ratingsPresentationConfig: {
-                              bgGradient: {
-                                colours: ["#C8F9E5", "#00FFFFFF"],
-                                gradientDirection:
-                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
-                              },
-                              ratingIconColor: "rating_very_good",
-                              ratingTextColor: "rating_very_good",
-                              ratingCountTextColor: "rating_very_good",
-                              ratingFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                              ratingCountFontName:
-                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
-                            },
-                          },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998303",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -6563,14 +5885,16 @@ export const menuData = [
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "77808447",
-                          name: "Butter Milk",
+                          id: "77808446",
+                          name: "Lime Juice",
                           category: "Cold Beverages",
                           description:
-                            "A refreshing and creamy blend, perfect for cooling down on a warm day or as a delightful thirst-quencher.",
+                            "Refreshing and tangy lime juice that will quench your thirst on a sunny day.",
+                          imageId:
+                            "FOOD_CATALOG/IMAGES/CMS/2024/8/27/b2dcaa22-d2ea-490c-956b-534564c002ae_f7256fcc-c33e-4c99-bebf-49af31566409.JPG",
                           inStock: 1,
                           isVeg: 1,
-                          price: 5500,
+                          price: 6000,
                           variants: {},
                           variantsV2: {},
                           itemAttribute: {
@@ -6582,9 +5906,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "4.4",
-                              ratingCount: "64 ratings",
-                              ratingCountV2: "64",
+                              rating: "4.9",
+                              ratingCount: "6 ratings",
+                              ratingCountV2: "6",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -6601,10 +5925,8 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
-                          parentId: "38998258",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
+                          parentId: "38998303",
+                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -6637,10 +5959,8 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {},
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
                           parentId: "38998289",
-                          menuFilterIds: ["BOLT", "VEG"],
+                          menuFilterIds: ["VEG"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -6689,10 +6009,8 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
                           parentId: "38998308",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
+                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -6819,12 +6137,11 @@ export const menuData = [
                           category: "Thali",
                           description:
                             "Serves 1 | Rassa bhaji, sukka bhaji, potato bhaji, dal / rasam, curd, papad, rice",
+                          inStock: 1,
                           isVeg: 1,
                           price: 19000,
                           variants: {},
                           variantsV2: {},
-                          nextAvailableAtMessage:
-                            "Next available at 10:30 am, today",
                           itemAttribute: {
                             vegClassifier: "VEG",
                             portionSize: "Serves 1",
@@ -6920,10 +6237,8 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
                           parentId: "38998310",
-                          menuFilterIds: ["BOLT", "VEG", "toprated"],
+                          menuFilterIds: ["VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -7006,25 +6321,27 @@ export const menuData = [
                 card: {
                   "@type":
                     "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
-                  title: "Breakfast Specials",
+                  title: "Breakfast Bestsellers",
                   itemCards: [
                     {
                       card: {
                         "@type":
                           "type.googleapis.com/swiggy.presentation.food.v2.Dish",
                         info: {
-                          id: "102935682",
-                          name: "Idli Fried                       ",
-                          category: "Breakfast Specials",
-                          description: "Serves 1 | | Minimum Rs. 10 off |",
-                          inStock: 1,
+                          id: "145741828",
+                          name: "Onion Uttappa                     ",
+                          category: "Breakfast Bestsellers",
+                          description:
+                            "An interesting spin on the dosa with onions mixed into the dosa batter and spread to a thick consistency",
+                          imageId: "exzofvueqoo05w8daaum",
                           isVeg: 1,
-                          price: 10000,
+                          price: 12000,
                           variants: {},
                           variantsV2: {},
+                          nextAvailableAtMessage:
+                            "Next available at 7 am, tomorrow",
                           itemAttribute: {
                             vegClassifier: "VEG",
-                            portionSize: "Serves 1",
                           },
                           ribbon: {},
                           type: "ITEM",
@@ -7032,9 +6349,9 @@ export const menuData = [
                           badgesV2: {},
                           ratings: {
                             aggregatedRating: {
-                              rating: "4.8",
-                              ratingCount: "45 ratings",
-                              ratingCountV2: "45",
+                              rating: "4.6",
+                              ratingCount: "1157 ratings",
+                              ratingCountV2: "1.2K+",
                             },
                             ratingsPresentationConfig: {
                               bgGradient: {
@@ -7051,8 +6368,428 @@ export const menuData = [
                                 "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
                             },
                           },
-                          parentId: "38998291",
+                          parentId: "38998317",
                           menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "145745313",
+                          name: "Wada Sambar Chatni                                    ",
+                          category: "Breakfast Bestsellers",
+                          description:
+                            "Deep fried savoury snack, made from urad dal and other spices.(Served With Sambar and Chutney)",
+                          imageId: "nz9cfmwkdq1sizbuyop0",
+                          isVeg: 1,
+                          price: 9000,
+                          variants: {},
+                          variantsV2: {},
+                          nextAvailableAtMessage:
+                            "Next available at 7 am, tomorrow",
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.6",
+                              ratingCount: "1492 ratings",
+                              ratingCountV2: "1.5K+",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998361",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "145741809",
+                          name: "Idli Sambar Chatni                     ",
+                          category: "Breakfast Bestsellers",
+                          description:
+                            "Super-soft steamed idli - the perfect way to kickstart your day. (Served with Sambar and Chutney)",
+                          imageId: "zcxaj69iddbb1pf6kpg8",
+                          isVeg: 1,
+                          price: 8000,
+                          variants: {},
+                          variantsV2: {},
+                          nextAvailableAtMessage:
+                            "Next available at 7 am, tomorrow",
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.7",
+                              ratingCount: "2576 ratings",
+                              ratingCountV2: "2.6K+",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998293",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "145741819",
+                          name: "Veg Cutlet                     ",
+                          category: "Breakfast Bestsellers",
+                          description:
+                            "Deep-fried mixed vegetable patty with a strong undertone of flavorful Indian masala.",
+                          imageId: "nnxjkhsnaiqkcitojm1v",
+                          isVeg: 1,
+                          price: 11000,
+                          variants: {},
+                          variantsV2: {},
+                          nextAvailableAtMessage:
+                            "Next available at 7 am, tomorrow",
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.5",
+                              ratingCount: "800 ratings",
+                              ratingCountV2: "800",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998359",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "145741821",
+                          name: "Masala Dosa                     ",
+                          category: "Breakfast Bestsellers",
+                          description:
+                            "A semi-spicy, crispy and delicious dosa with masala folded into it.",
+                          imageId: "xljvwxzldaocfxf1qpvz",
+                          isVeg: 1,
+                          price: 11000,
+                          variants: {},
+                          variantsV2: {},
+                          nextAvailableAtMessage:
+                            "Next available at 7 am, tomorrow",
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.7",
+                              ratingCount: "862 ratings",
+                              ratingCountV2: "862",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998306",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "145741824",
+                          name: "Sada Dosa                     ",
+                          category: "Breakfast Bestsellers",
+                          description:
+                            "Tawa- toasted, crispy dosas made from rice batter.",
+                          imageId: "nbqyct13ucbwfjgcznyk",
+                          isVeg: 1,
+                          price: 9000,
+                          variants: {},
+                          variantsV2: {},
+                          nextAvailableAtMessage:
+                            "Next available at 7 am, tomorrow",
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.7",
+                              ratingCount: "500 ratings",
+                              ratingCountV2: "500",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998337",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "145741817",
+                          name: "Idli Wada Sambar                     ",
+                          category: "Breakfast Bestsellers",
+                          description:
+                            "A classic and delicious combo from South with your go to dish idli and crunchy crispy vada served with chutney and sambhar.",
+                          isVeg: 1,
+                          price: 10000,
+                          variants: {},
+                          variantsV2: {},
+                          nextAvailableAtMessage:
+                            "Next available at 7 am, tomorrow",
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.7",
+                              ratingCount: "651 ratings",
+                              ratingCountV2: "651",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998294",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "145741825",
+                          name: "Potato Wada Chatni Sambar                     ",
+                          category: "Breakfast Bestsellers",
+                          description:
+                            "Delicious lip-smacking Potato vadas served with Chutney and Sambar.",
+                          imageId: "dau9bsevtrshjejxthfw",
+                          isVeg: 1,
+                          price: 8000,
+                          variants: {},
+                          variantsV2: {},
+                          nextAvailableAtMessage:
+                            "Next available at 7 am, tomorrow",
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.7",
+                              ratingCount: "694 ratings",
+                              ratingCountV2: "694",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998327",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "145741811",
+                          name: "Upma                     ",
+                          category: "Breakfast Bestsellers",
+                          description:
+                            "A tasty dish made from rava cooked with vegetables and select Indian spices.",
+                          imageId: "anszqjdwfxp7r47icfz1",
+                          isVeg: 1,
+                          price: 5700,
+                          variants: {},
+                          variantsV2: {},
+                          nextAvailableAtMessage:
+                            "Next available at 7 am, tomorrow",
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "1152 ratings",
+                              ratingCountV2: "1.2K+",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          imageBadges: [
+                            {
+                              imageId: "Low%20cal/Low%20cal%201_1.png",
+                            },
+                          ],
+                          parentId: "46260962",
+                          menuFilterIds: ["EATRIGHT", "VEG", "toprated"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -7060,7 +6797,8 @@ export const menuData = [
                     },
                   ],
                   subtitleSuffix: {},
-                  categoryId: "28016553",
+                  image: "exzofvueqoo05w8daaum",
+                  categoryId: "50306690",
                 },
               },
             },
@@ -7250,10 +6988,8 @@ export const menuData = [
                           ratings: {
                             aggregatedRating: {},
                           },
-                          isBolt: true,
-                          boltImageId: "bolt/bolt-tag/bolt_menu_tag.png",
                           parentId: "77354470",
-                          menuFilterIds: ["BOLT", "VEG"],
+                          menuFilterIds: ["VEG"],
                         },
                         analytics: {},
                         hideRestaurantDetails: true,
@@ -7262,6 +6998,70 @@ export const menuData = [
                   ],
                   subtitleSuffix: {},
                   categoryId: "44753763",
+                },
+              },
+            },
+            {
+              card: {
+                card: {
+                  "@type":
+                    "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                  title: "Breakfast Specials",
+                  itemCards: [
+                    {
+                      card: {
+                        "@type":
+                          "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                        info: {
+                          id: "102935682",
+                          name: "Idli Fried                       ",
+                          category: "Breakfast Specials",
+                          description: "Serves 1 | | Minimum Rs. 10 off |",
+                          isVeg: 1,
+                          price: 10000,
+                          variants: {},
+                          variantsV2: {},
+                          nextAvailableAtMessage:
+                            "Next available at 7 am, tomorrow",
+                          itemAttribute: {
+                            vegClassifier: "VEG",
+                            portionSize: "Serves 1",
+                          },
+                          ribbon: {},
+                          type: "ITEM",
+                          itemBadge: {},
+                          badgesV2: {},
+                          ratings: {
+                            aggregatedRating: {
+                              rating: "4.8",
+                              ratingCount: "45 ratings",
+                              ratingCountV2: "45",
+                            },
+                            ratingsPresentationConfig: {
+                              bgGradient: {
+                                colours: ["#C8F9E5", "#00FFFFFF"],
+                                gradientDirection:
+                                  "GRADIENT_DIRECTION_LEFT_TO_RIGHT",
+                              },
+                              ratingIconColor: "rating_very_good",
+                              ratingTextColor: "rating_very_good",
+                              ratingCountTextColor: "rating_very_good",
+                              ratingFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                              ratingCountFontName:
+                                "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            },
+                          },
+                          parentId: "38998291",
+                          menuFilterIds: ["VEG", "toprated"],
+                        },
+                        analytics: {},
+                        hideRestaurantDetails: true,
+                      },
+                    },
+                  ],
+                  subtitleSuffix: {},
+                  categoryId: "28016553",
                 },
               },
             },
