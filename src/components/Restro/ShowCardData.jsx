@@ -11,7 +11,7 @@ const RestroMenu = () =>
      * Here using Mock data as Api calls is blocked by swiggy.
      */
     const [restro, setRestro] = useState(menuData);
-    const [showIndex, setShowIndex] = useState(false);
+    const [showIndex, setShowIndex] = useState(0);
 
     /**
      * useParams is a React Router hook used to access dynamic route parameters from the URL,
@@ -61,9 +61,14 @@ const RestroMenu = () =>
                 /*Show the Menu categories Accordion */
                 menuCategories.map((category, index) => 
                     <MenuCategory
-                        data={category?.card.card}
                         key={category.card.card.categoryId}
-                        showItems={true} // Controlled Component
+                        data={category?.card.card}
+                        
+                        // Controlled Component
+                        showItems={index === showIndex ? true : false}
+                        setShowIndex= {()=>{
+                            setShowIndex(index);
+                        }} 
                     />) 
             }
         </div>
