@@ -1,8 +1,9 @@
 import DisplayCard, {UpdatedDisplayCard} from "./Restro/DisplayCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useEffect, useContext } from "react";
 import ShimmerLoader from "./ShimmerLoader";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => 
 {
@@ -12,6 +13,8 @@ const Body = () =>
 
   const [searchInput, setSearchInput] = useState("");
   const UpdatedCard = UpdatedDisplayCard(DisplayCard);
+
+  const {loggedInUser, setUserName} = useContext(UserContext);
 
  /**
  * useEffect accepts two parameters:
@@ -47,7 +50,7 @@ const Body = () =>
     console.log("Swiggy Api:", json);
 
     // Optional Chaining
-    var restaurants = json.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? [];
+    var restaurants = json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? [];
     console.log("Restaurants :", restaurants);
     setSourceData(restaurants);
     setFilterData(restaurants);
@@ -108,6 +111,16 @@ const Body = () =>
             }
           }>Filter Top Rated Restaurants
         </button>
+
+        <div>
+          <label className="p-2 font-bold">UserName :</label>
+          <input 
+            className="border border-solid border-black  m-2 rounded-lg w-100 py-1 px-2  placeholder:text-gray-500 placeholder:italic"
+            placeholder="Enter UserName..."
+            value={loggedInUser}
+            onChange={(evt) => setUserName(evt.target.value)}
+            />
+        </div>
       </div>
 
       <div className="flex justify-evenly flex-wrap">

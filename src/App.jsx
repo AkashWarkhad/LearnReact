@@ -52,15 +52,15 @@ const AppLayout = () =>
 
   return (
     // OutSide the Layout default will be reflected inside the layout useName & for Header section will see Elon Musk
-    <UserContext.Provider value={ {loggedInUser: userName}}>
+    <UserContext.Provider value={ {loggedInUser: userName , setUserName}}>
       <div className="app">
-
-        <UserContext.Provider value={{loggedInUser : "Elon Musk"}}>
-          <Header />
-        </UserContext.Provider>
+        <Header />
         
         <Outlet />
-        <Footer />
+
+        <UserContext.Provider value={{loggedInUser : "Elon Musk"}}>
+          <Footer />
+        </UserContext.Provider>
       </div>
     </UserContext.Provider>
     
@@ -88,7 +88,7 @@ const appRouter = createBrowserRouter(
         },
         {
           "path": "/contact",
-          "element": <ContactUsClass className = "ContactUsClass"/>
+          "element": <ContactUsClass className ="ContactUsClass"/>
         },
         {
           "path": "/grocery",
