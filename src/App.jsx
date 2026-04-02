@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ShowCardData from "./components/Restro/ShowCardData";
 import { lazy , Suspense, useEffect, useState } from "react";
 import UserContext from "./utils/UserContext";
+import Cart from "./components/Cart";
 //import Grocery from "./components/Grocery";
 
 /** Comment the above regular import
@@ -98,8 +99,8 @@ const appRouter = createBrowserRouter(
           "element": <Suspense fallback={<h1>Loading...</h1>}> <Grocery /> </Suspense> 
         },
         {
-          "path": "/hello",
-          "element": <HelloWorld />,
+          "path": "/cart",
+          "element": <Cart />,
         },
         {
           "path": "/restaurant/:restroId", //Dynamic routing with Id

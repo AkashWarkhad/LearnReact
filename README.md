@@ -106,6 +106,7 @@ This repository will include implementations and practice examples for the follo
 - React Life Cycle Method Diagram - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 - Lazy Loading with Suspense - https://react.dev/reference/react/lazy#suspense-for-code-splitting
 - Tailwind CCS Installation guide - https://tailwindcss.com/docs/installation/framework-guides
+- Redux - https://redux.js.org/
 
 
 

@@ -35,7 +35,8 @@ const Header = () =>
           <li className="mr-10"><a href="/contact">Contact Us</a></li> {/**Not Use Achor Tag Use Link Component */}
           <li className="mr-10"><Link to="/grocery">Grocery</Link></li>
           
-          <li className="mr-10"><Link to="/hello">Cart</Link></li>
+          <li className="mr-10"><Link to="/cart">Cart</Link></li>
+          
           <li className="mr-10"><button className="loginBtn" onClick=
             {
               ()=> { setBtnName(btnName == "Login" ? "Logout" : "Login") }
