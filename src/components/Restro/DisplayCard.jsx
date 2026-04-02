@@ -1,5 +1,5 @@
 
-const Card = ({params}) => 
+const DisplayCard = ({params}) => 
 {
     const {name, cloudinaryImageId, avgRating, cuisines, totalRatingsString, costForTwo} = params;
     return (
@@ -23,17 +23,17 @@ const Card = ({params}) =>
 
 // Higher Order Component
 // RestroCard (Input) => RestroCardPromoted (Returns Updated Card)
-export const UpdatedCard = (Card) => 
+export const UpdatedCard = (DisplayCard) => 
 {
     return (props) => 
     {
         return(
             <div>
                 <label className="absolute bg-black text-white p-1 rounded">Promoted</label>
-                <Card  {...props}/>
+                <DisplayCard  {...props}/>
             </div>
         );
     };
 };
 
-export default Card;
+export default DisplayCard;

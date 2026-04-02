@@ -1,4 +1,4 @@
-import Card, {UpdatedCard} from "./RestrCard";
+import DisplayCard, {UpdatedCard} from "./Restro/DisplayCard";
 import { useState, useEffect } from "react";
 import ShimmerLoader from "./ShimmerLoader";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ const Body = () =>
   const [filterData, setFilterData] = useState([]);
 
   const [searchInput, setSearchInput] = useState("");
-  const UpdatedRestroCard = UpdatedCard(Card);
+  const UpdatedRestroCard = UpdatedCard(DisplayCard);
 
  /**
  * useEffect accepts two parameters:
@@ -124,7 +124,7 @@ const Body = () =>
                   {
                     rest.info.id % 2 === 0
                     ? <UpdatedRestroCard params={rest.info}/> // This is Updated card
-                    : <Card params={rest.info}></Card>
+                    : <DisplayCard params={rest.info}></DisplayCard>
                   }
                 </Link>
             ))
