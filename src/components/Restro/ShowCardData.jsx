@@ -2,8 +2,9 @@ import ShimmerLoader from "../ShimmerLoader";
 import { menuData } from "../../utils/menuMockData";
 import { useParams } from "react-router-dom";
 import useRestroInfoCustomHook from "../../utils/useRestroInfoCustomHook";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import MenuCategory from "./MenuCategory";
+import UserContext from "../../utils/UserContext";
 
 const RestroMenu = () => 
 {
@@ -12,6 +13,9 @@ const RestroMenu = () =>
      */
     const [restro, setRestro] = useState(menuData);
     const [showIndex, setShowIndex] = useState(0);
+
+    // Access the context data everywhere
+    const { loggedInUser } = useContext(UserContext);
 
     /**
      * useParams is a React Router hook used to access dynamic route parameters from the URL,
@@ -53,6 +57,9 @@ const RestroMenu = () =>
     return (
         <div className="p-2 m-1">
             <h1 className="text-center font-bold text-3xl">{restroInfo.name ?? "Green spice Hotel"}</h1>
+
+            <p className="italic">Hi {loggedInUser} happy to see you here, select food & enjoy your meal...</p>
+            
             <p className=" text-lg m-4">Cuisines: {restroInfo.cuisines.join(", ") ?? "Coffe, South Indian, North Indian"}</p>
 
             <h1 className="text-xl font-bold text-center">Menu</h1>
@@ -63,7 +70,7 @@ const RestroMenu = () =>
                     <MenuCategory
                         key={category.card.card.categoryId}
                         data={category?.card.card}
-                        
+
                         // Controlled Component
                         showItems={index === showIndex ? true : false}
                         setShowIndex= {()=>{

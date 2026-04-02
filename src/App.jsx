@@ -8,12 +8,14 @@ import Footer from "./components/Footer";
 import ContactUsClass from "./components/ContactUsClass"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ShowCardData from "./components/Restro/ShowCardData";
-import { lazy , Suspense } from "react";
+import { lazy , Suspense, useEffect, useState } from "react";
+import UserContext from "./utils/UserContext";
 //import Grocery from "./components/Grocery";
 
 /** Comment the above regular import
  * Lazy Loading : Its also called as Chuncking/ Code Splitting/ Dynamic bundling/ On Demand loading/ Dynamic loading */
 const Grocery = lazy(()=> import("./components/Grocery"));
+
 
 /**
  * Food app design :
@@ -36,12 +38,32 @@ const Grocery = lazy(()=> import("./components/Grocery"));
 
 const AppLayout = () => 
 {
+  const [userName, setUserName] = useState("Admin");
+
+  useEffect(()=>
+  {
+    // Provide UserName & PassWord & get Autherized
+
+    const data = {
+      name: "Akash Warkhad"
+    }
+    setUserName(data.name);
+  }, []);
+
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    // OutSide the Layout default will be reflected inside the layout useName & for Header section will see Elon Musk
+    <UserContext.Provider value={ {loggedInUser: userName}}>
+      <div className="app">
+
+        <UserContext.Provider value={{loggedInUser : "Elon Musk"}}>
+          <Header />
+        </UserContext.Provider>
+        
+        <Outlet />
+        <Footer />
+      </div>
+    </UserContext.Provider>
+    
   );
 };
 

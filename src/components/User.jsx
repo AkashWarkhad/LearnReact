@@ -1,10 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const User = ({component, location})=> 
 {
     // Declaration of fields in Functional based component
     const [count, setCount] = useState(1);
     const [mobNo, setMobNo] = useState("9743483**8");
+
+    // Use useContext to fecth the data anywhere
+    const { loggedInUser } = useContext(UserContext);
 
     useEffect(()=>
     {
@@ -29,6 +33,7 @@ const User = ({component, location})=>
             <h3>{count} Location : {location}</h3>
             <p>Email Address : helpdesk24by7@gamail.com</p>
             <p>Mobile No: {mobNo}</p>
+            <h1>User Context in Class Component : <b>"{loggedInUser}"</b></h1>
             <button onClick={()=> 
                 {
                     setCount(count + 1);

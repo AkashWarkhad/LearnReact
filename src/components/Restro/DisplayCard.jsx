@@ -10,13 +10,15 @@ const DisplayCard = ({params}) =>
                 src= {"https://media-assets.swiggy.com/swiggy/image/upload/" + cloudinaryImageId}>
             </img>
 
-            <b className="m-2">{name}</b>
-            <p className="p-2 italic">{cuisines.join(", ")}</p>
+            <div>
+                <b className="p-2">{name}</b>
+                <p className="p-2 italic">{cuisines.join(", ")}</p>
 
-            <div className="flex">
-                <p className="p-2">{avgRating}</p>
-                <p className="p-2">Votes({totalRatingsString})</p>
-                <p className="p-2 bold">{costForTwo}</p>
+                <div className="flex h-5 justify-evenly">
+                    <p>{avgRating}</p>
+                    <p>Votes({totalRatingsString})</p>
+                    <p className="font-bold">{costForTwo}</p>
+                </div>
             </div>
         </div>
     );
