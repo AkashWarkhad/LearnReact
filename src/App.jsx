@@ -11,6 +11,11 @@ import ShowCardData from "./components/Restro/ShowCardData";
 import { lazy , Suspense, useEffect, useState } from "react";
 import UserContext from "./utils/UserContext";
 import Cart from "./components/Cart";
+
+// Provide Store to our application on root level using react redux
+import appStore from "./utils/AppStore";
+import { Provider } from "react-redux";
+
 //import Grocery from "./components/Grocery";
 
 /** Comment the above regular import
@@ -52,18 +57,26 @@ const AppLayout = () =>
   }, []);
 
   return (
-    // OutSide the Layout default will be reflected inside the layout useName & for Header section will see Elon Musk
-    <UserContext.Provider value={ {loggedInUser: userName , setUserName}}>
-      <div className="app">
-        <Header />
-        
-        <Outlet />
 
-        <UserContext.Provider value={{loggedInUser : "Elon Musk"}}>
-          <Footer />
-        </UserContext.Provider>
-      </div>
-    </UserContext.Provider>
+    <Provider store={appStore}>
+
+      {/* OutSide the Layout default configured value will be reflected, 
+          Inside the layout useName value will reflect & for Footer section Elon Musk value will be reflects. */}
+          
+      <UserContext.Provider value={ {loggedInUser: userName , setUserName}}>
+        <div className="app">
+          
+          <Header />
+          <Outlet />
+
+          <UserContext.Provider value={{loggedInUser : "Elon Musk"}}> //
+            <Footer />
+          </UserContext.Provider>
+
+        </div>
+      </UserContext.Provider>
+    </Provider>
+    
     
   );
 };
