@@ -1,9 +1,12 @@
+import HelloWorld from "./HelloWorld";
+
 const About = ()=>
 {
     return(
         <div>
-            <h1>About</h1>
-            <p>This is about section.</p>
+            <p className="text-center font-bold">This is about React Fundamentals.</p> <hr/> <br/>
+            
+            <HelloWorld />
         </div>
     );
 }

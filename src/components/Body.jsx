@@ -2,7 +2,7 @@ import DisplayCard, {UpdatedDisplayCard} from "./Restro/DisplayCard";
 import { useState, useEffect, useEffect, useContext } from "react";
 import ShimmerLoader from "./ShimmerLoader";
 import { Link } from "react-router-dom";
-import useOnlineStatus from "../utils/useOnlineStatus";
+import useOnlineStatus from "../utils/CustomHooks/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 
 const Body = () => 

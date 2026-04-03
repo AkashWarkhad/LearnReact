@@ -1,7 +1,20 @@
-import { CDN_URL, EX_URL } from "../../utils/constant";
+import { useDispatch } from "react-redux";
+import { CDN_URL, EX_URL } from "../../utils/StaticData/constant";
+// Also needs to Import the dispatch action
+import { addItem } from "../../utils/Redux/cartSlice";
 
 const CategoryItems = (itemCards) => 
 {
+  // Returns the dispatch function from the Redux store.
+  const dispatch = useDispatch();
+
+  const addItemsToCart = (item) => 
+  {
+    console.log(item.card.info.name, "Item added in the Cart");
+    
+    // Dispatch an action called addItem with payload, Note addItem action needs to import otherwise you will see error: ReferenceError: addItem is not defined
+    dispatch(addItem(item));
+  }
 
   return (
     <div className="bg-white">
@@ -22,7 +35,11 @@ const CategoryItems = (itemCards) =>
 
                 <div className="w-3/12">
                     <div className="absolute"> 
-                        <button className="p-2 bg-white shadow-lg mx-10 my-20 rounded-xl text-green-600 font-bold">Add➕</button>
+                        <button 
+                          className="cursor-pointer p-2 bg-white shadow-lg mx-10 my-20 rounded-xl text-green-600 font-bold"
+                          onClick={() => addItemsToCart(item)}
+                        >Add➕
+                        </button>
                     </div>
 
                     <img className="w-full rounded-lg" src={item.card.info?.imageId != null ? CDN_URL + item.card.info?.imageId : EX_URL} />

@@ -101,7 +101,7 @@ class UserClass extends React.Component
             <p>Mobile No : {this.state.mobNo}</p>
             <p>Repository : {repos_url}</p>
 
-            {/* User Class in Class Component using Consumer */}
+            {/* Consume loggedInUser using useContext in ClassBasedComponent.*/}
             <UserContext.Consumer>
                     {(data)=> <h1>User Context in Class Component : <b>"{data.loggedInUser}"</b></h1>}
             </UserContext.Consumer>
