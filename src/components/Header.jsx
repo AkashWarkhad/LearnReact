@@ -3,6 +3,7 @@ import { LOGO_URL } from "../utils/StaticData/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/CustomHooks/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => 
 {
@@ -11,6 +12,11 @@ const Header = () =>
 
   // Set the data in context
   const { loggedInUser } = useContext(UserContext);
+
+  //Subscribing the store using useSelector Hook
+  const cartItems = useSelector((store)=> store.cart.items);
+
+  console.log("CartItems From AppStore: ", cartItems);
 
   return (
     <div className="flex justify-between border border-amber-200 bg-linear-to-r from-transparent via-amber-50 to-amber-300">
@@ -35,13 +41,15 @@ const Header = () =>
           <li className="mr-10"><a href="/contact">Contact Us</a></li> {/**Not Use Achor Tag Use Link Component */}
           <li className="mr-10"><Link to="/grocery">Grocery</Link></li>
           
-          <li className="mr-10"><Link to="/cart">Cart</Link></li>
+          <li className="mr-10"><Link to="/cart">Cart({cartItems.length} items)</Link></li>
           
-          <li className="mr-10"><button className="loginBtn" onClick=
-            {
-              ()=> { setBtnName(btnName == "Login" ? "Logout" : "Login") }
-            }>{btnName}
-          </button></li>
+          <li className="mr-10">
+            <button className="loginBtn" onClick=
+              {
+                ()=> { setBtnName(btnName == "Login" ? "Logout" : "Login") }
+              }>{btnName}
+            </button>
+          </li>
 
           <li className="font-bold mr-10">{loggedInUser}</li>
         </ul>

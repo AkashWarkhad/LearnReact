@@ -5,11 +5,11 @@ const cartSlice = createSlice(
     name: "cart",
     initialState: 
     {
-        items: []
+        items: ["Puzza", "Burger"]
     },
     reducers: 
     {
-        addItem : (state, action) => 
+        addItem: (state, action) => 
         {
             state.items.push(action.payload);
         },
@@ -17,7 +17,7 @@ const cartSlice = createSlice(
         {
             state.items.pop();
         },
-        clearCart : (state)=> 
+        clearCart: (state)=> 
         {
             state.items.length = 0;
             //state.items = []; <- this won't works
