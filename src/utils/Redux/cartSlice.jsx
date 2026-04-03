@@ -1,16 +1,17 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice(
 {
     name: "cart",
     initialState: 
     {
-        items: ["Puzza", "Burger"]
+        items: []
     },
     reducers: 
     {
         addItem: (state, action) => 
         {
+            // Redux toolkit uses immer library behind the scene to manage this.
             state.items.push(action.payload);
         },
         removeItem: (state, action)=> 
@@ -19,8 +20,12 @@ const cartSlice = createSlice(
         },
         clearCart: (state)=> 
         {
-            state.items.length = 0;
-            //state.items = []; <- this won't works
+            //state.items = []; <- this won't works becuase its just change the local state variable 
+
+            // current is comming from the redux toolkit to print the current state data.
+            console.log("Cleared Items from Slice: ", current(state.items));
+
+            state.items.length = 0; // OR  return { items: [] }; <- this will replace the state.items with empty array
         }
     }
 });

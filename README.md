@@ -107,6 +107,7 @@ This repository will include implementations and practice examples for the follo
 - Lazy Loading with Suspense - https://react.dev/reference/react/lazy#suspense-for-code-splitting
 - Tailwind CCS Installation guide - https://tailwindcss.com/docs/installation/framework-guides
 - Redux - https://redux.js.org/
+- Immer - https://immerjs.github.io/immer/ (responsible for immutating the state behind the Redux Slice)
 
 ### Redux Toolkit
 - Steps :
@@ -128,6 +129,7 @@ This repository will include implementations and practice examples for the follo
 - React Developer Tool Extension - Which enables component & profiler in the inspect section
 - Allow CORS Extension
 - JSON Viewer Extension
+- Redux DevTools Extension - Redux DevTools for debugging application's state changes. The extension provides power-ups for your Redux development workflow.
 
 ### Types of Routing
 - Server Side Routing

@@ -8,11 +8,12 @@ const CategoryItems = (itemCards) =>
   // Returns the dispatch function from the Redux store.
   const dispatch = useDispatch();
 
-  const addItemsToCart = () => 
+  const addItemsToCart = (item) => 
   {
-    console.log("Clicked");
+    console.log(item.card.info.name, "Item added in the Cart");
+    
     // Dispatch an action called addItem with payload, Note addItem action needs to import otherwise you will see error: ReferenceError: addItem is not defined
-    dispatch(addItem("Tea"));
+    dispatch(addItem(item));
   }
 
   return (
@@ -36,7 +37,7 @@ const CategoryItems = (itemCards) =>
                     <div className="absolute"> 
                         <button 
                           className="cursor-pointer p-2 bg-white shadow-lg mx-10 my-20 rounded-xl text-green-600 font-bold"
-                          onClick={addItemsToCart}
+                          onClick={() => addItemsToCart(item)}
                         >Add➕
                         </button>
                     </div>
