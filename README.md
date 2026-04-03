@@ -109,12 +109,13 @@ This repository will include implementations and practice examples for the follo
 - Redux - https://redux.js.org/
 
 ### Redux Toolkit
-- Install Redux toolkit (@reduxjs/toolkit) & react-redux (CMD : npm i @reduxjs/toolkit react-redux)
-- Buid our store
-- Connect our store to our app
-- Slice (Cart Slice)
-- Dispatch (Action)
-- Selector
+- Steps :
+    - Install Redux toolkit (@reduxjs/toolkit) & react-redux (CMD : npm i @reduxjs/toolkit react-redux)
+    - Buid our store
+    - Connect our store to our app
+    - Slice (Cart Slice)
+    - Dispatch (Action)
+    - Selector
 
 ---
 

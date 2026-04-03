@@ -1,4 +1,4 @@
-import { CDN_URL, EX_URL } from "../../utils/constant";
+import { CDN_URL, EX_URL } from "../../utils/StaticData/constant";
 
 const CategoryItems = (itemCards) => 
 {

@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
-import { LOGO_URL } from "../utils/constant";
+import { LOGO_URL } from "../utils/StaticData/constant";
 import { Link } from "react-router-dom";
-import useOnlineStatus from "../utils/useOnlineStatus";
+import useOnlineStatus from "../utils/CustomHooks/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 
 const Header = () => 

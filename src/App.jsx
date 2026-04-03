@@ -13,7 +13,7 @@ import UserContext from "./utils/UserContext";
 import Cart from "./components/Cart";
 
 // Provide Store to our application on root level using react redux
-import appStore from "./utils/AppStore";
+import appStore from "./utils/Redux/appStore";
 import { Provider } from "react-redux";
 
 //import Grocery from "./components/Grocery";
@@ -58,26 +58,26 @@ const AppLayout = () =>
 
   return (
 
+    // Provide redux Appstore
     <Provider store={appStore}>
 
       {/* OutSide the Layout default configured value will be reflected, 
           Inside the layout useName value will reflect & for Footer section Elon Musk value will be reflects. */}
-          
+
       <UserContext.Provider value={ {loggedInUser: userName , setUserName}}>
         <div className="app">
           
           <Header />
           <Outlet />
 
-          <UserContext.Provider value={{loggedInUser : "Elon Musk"}}> //
+          <UserContext.Provider value={{loggedInUser : "Elon Musk"}}>
             <Footer />
           </UserContext.Provider>
 
         </div>
       </UserContext.Provider>
+
     </Provider>
-    
-    
   );
 };
 

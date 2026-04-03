@@ -1,7 +1,7 @@
 import ShimmerLoader from "../ShimmerLoader";
-import { menuData } from "../../utils/menuMockData";
+import { menuData } from "../../utils/StaticData/menuMockData";
 import { useParams } from "react-router-dom";
-import useRestroInfoCustomHook from "../../utils/useRestroInfoCustomHook";
+import useRestroInfoCustomHook from "../../utils/CustomHooks/useRestroInfoCustomHook";
 import { useContext, useState } from "react";
 import MenuCategory from "./MenuCategory";
 import UserContext from "../../utils/UserContext";
