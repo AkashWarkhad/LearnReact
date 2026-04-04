@@ -108,6 +108,8 @@ This repository will include implementations and practice examples for the follo
 - Tailwind CCS Installation guide - https://tailwindcss.com/docs/installation/framework-guides
 - Redux - https://redux.js.org/
 - Immer - https://immerjs.github.io/immer/ (responsible for immutating the state behind the Redux Slice)
+- React Testing Library - https://testing-library.com/docs/react-testing-library/intro/
+- Jest Library - https://jestjs.io/
 
 ### Redux Toolkit
 - Steps :
@@ -117,6 +119,33 @@ This repository will include implementations and practice examples for the follo
     - Slice (Cart Slice)
     - Dispatch (Action)
     - Selector
+
+### Setting up testing : 
+- Install React Testing Lib -> (npm install --save-dev @testing-library/react @testing-library/dom)
+- Install Jest -> (npm i -D jest)
+- Install Bable Dependencies (npm install --save-dev babel-jest @babel/core @babel/preset-env)
+- Configure Bable file :  Can find here (https://jestjs.io/docs/getting-started)
+
+- Configure .parcelrc file in root level to disable default babel traspilation from main parcel : find file content -> (https://parceljs.org/languages/javascript/#usage-with-other-tools)
+
+- Write Jest Configuration (npx create-jest) Select (TypeScript : No -> jsdom (browser-like) -> coverage : y -> babel -> clear test cache: yes (Can find data : E:\Web-Design-Projects\REACT\LearnReact\jest.config.js )
+
+- Install Jest Environmet Lib : (npm install --save-dev jest-environment-jsdom) url: https://testing-library.com/docs/react-testing-library/setup#jest-28
+
+- Install babels preset lib -> (npm i -D @babel/preset-react)
+
+- Add this line in babel.config.js : ["@babel/preset-react", { runtime: "automatic"}]
+
+- Install @testing-library/jest-dom : (npm i -D @testing-library/jest-dom)
+
+- File which considered as test file is under __tests__ folder : 
+testMatch Regex: **/__tests__/**/*.?([mc])[jt]s?(x), **/?(*.)+(spec|test).?([mc])[jt]s?(x)
+
+    - Header.test.js
+    - Header.test.ts
+    - Header.spec.js
+    - Header.spect.ts
+
 
 ---
 
@@ -134,6 +163,11 @@ This repository will include implementations and practice examples for the follo
 ### Types of Routing
 - Server Side Routing
 - Client Side Routing
+
+### Types Of Testing - Developer
+- Unit Test -> Test the pice of code or component in isolation.
+- Integration Test -> Test the integration of components flow together.
+- End To End Test (E2E) -> Test the full e2e flow of the feature.
 
 ## 📦 Project Setup
 
