@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 import MenuCategory from "./MenuCategory";
 import UserContext from "../../utils/UserContext";
 
-const RestroMenu = () => 
+const ShowCardData = () => 
 {
     /**
      * Here using Mock data as Api calls is blocked by swiggy.
@@ -83,4 +83,4 @@ const RestroMenu = () =>
     )
 }
 
-export default RestroMenu;
+export default ShowCardData;

@@ -5,6 +5,22 @@ import "@testing-library/jest-dom"
 // Note : You can use test or it both works
 describe("About Component Test Cases", () => 
 {
+    beforeAll(() => {
+        console.log("Run before All Test");
+    });
+
+    beforeEach(() => {
+        console.log("Run before each tests");
+    });
+
+    afterAll(()=> {
+        console.log("Run After All.");
+    });
+
+    afterEach(()=> {
+        console.log("Run After each tests");
+    });
+
     test("About component should load succesfully.", () => 
     {
         // Arrange & Act

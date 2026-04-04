@@ -21,7 +21,10 @@ const CategoryItems = (itemCards) =>
       {
         itemCards.data.map((item) => 
         (
-            <div key={item.card.info.id} className="p-2 m-3 border border-gray-200 border-b-4 text-left flex justify-between">
+            <div 
+              key={item.card.info.id}
+              data-testid="foodItem"
+              className="p-2 m-3 border border-gray-200 border-b-4 text-left flex justify-between">
                     
                 <div className="w-9/12">
 
