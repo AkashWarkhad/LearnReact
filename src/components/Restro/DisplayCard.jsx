@@ -1,7 +1,7 @@
 
 const DisplayCard = ({params}) => 
 {
-    //console.log("DisplayCard :", params);
+    console.log("DisplayCard :", params);
     const {name, cloudinaryImageId, avgRating, cuisines, totalRatingsString, costForTwo} = params;
     return (
         <div className="w-68 h-90 p-1 m-1 rounded-lg bg-amber-100 hover:bg-amber-200">
