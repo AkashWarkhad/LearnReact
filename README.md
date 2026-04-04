@@ -153,6 +153,10 @@ testMatch Regex: **/__tests__/**/*.?([mc])[jt]s?(x), **/?(*.)+(spec|test).?([mc]
 - Shortcut to create react component in new file : rafce
 - For Tailwind CSS IntelliSense plugin, to see suggestion : Ctrl + SpaceBar
 - Shortcut to add Emoji : Windows Key + .
+- To run test with anything changes in the test : 
+    - Add Script : "watch-test": "jest --watch"
+    - Run Once in the Terminal, it will run on every change : (npm run watch-test)
+    - OR Add extension called Jest
 
 ### Install Plugins & Extensions : 
 - React Developer Tool Extension - Which enables component & profiler in the inspect section

@@ -1,5 +1,5 @@
 import DisplayCard, {UpdatedDisplayCard} from "./Restro/DisplayCard";
-import { useState, useEffect, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import ShimmerLoader from "./ShimmerLoader";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/CustomHooks/useOnlineStatus";
@@ -76,6 +76,7 @@ const Body = () =>
         <div className="flex">
           <input
             name="inputSearch"
+            data-testid="searchInput" // For testing Purpose to fetch input
             className="border border-solid border-black  m-2 rounded-lg w-100 py-1 px-2  placeholder:text-gray-500 placeholder:italic"
             placeholder="Search for anything..."
             type="search"
@@ -99,7 +100,7 @@ const Body = () =>
         </div>
         
         
-        <button className="px-2 mx-2 bg-green-400 rounded-lg" onClick=
+        <button className="px-2 mx-2 bg-green-400 rounded-lg cursor-pointer" onClick=
           {()=> 
             {
               const filteredData = sourceData
