@@ -16,3 +16,8 @@ dist/
 # OS files
 .DS_Store
 Thumbs.db
+
+# test
+coverage/
+build/
+.cache/

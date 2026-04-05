@@ -9,6 +9,7 @@ const cartSlice = createSlice(
     },
     reducers: 
     {
+        // Key is name of Action & Value is the corresponding reducer logic.
         addItem: (state, action) => 
         {
             // Redux toolkit uses immer library behind the scene to manage this.
@@ -27,7 +28,20 @@ const cartSlice = createSlice(
 
             state.items.length = 0; // OR  return { items: [] }; <- this will replace the state.items with empty array
         }
-    }
+    },
+    // Not used in the project but try to use it.
+    // extraReducers: (builder) => 
+    // {
+    //     builder.addCase(otherSliceAction, (state, action) => 
+    //     {
+    //         // logic for handling other slice's action
+    //     })
+
+    //     .addDefaultCase((state, action) => 
+    //     {
+    //         // default logic for handling actions not handled by this slice
+    //     });
+    // }
 });
 
 // When we create createSlice then cartSlice returns actions & reducer & we can access like below :

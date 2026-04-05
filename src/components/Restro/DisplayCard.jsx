@@ -4,7 +4,8 @@ const DisplayCard = ({params}) =>
     //console.log("DisplayCard :", params);
     const {name, cloudinaryImageId, avgRating, cuisines, totalRatingsString, costForTwo} = params;
     return (
-        <div className="w-68 h-90 p-1 m-1 rounded-lg bg-amber-100 hover:bg-amber-200">
+        <div className="w-68 h-90 p-1 m-1 rounded-lg bg-amber-100 hover:bg-amber-200"
+            data-testid="restroCard">
             <img
                 className="h-50 object-cover w-full rounded-lg bg-cover"
                 src= {"https://media-assets.swiggy.com/swiggy/image/upload/" + cloudinaryImageId}>
