@@ -93,6 +93,7 @@ This repository will include implementations and practice examples for the follo
 - Rendering process in React
 
 ### Links
+- swiggy: https://www.swiggy.com/ (Refferenced)
 - React: https://react.dev/learn
 - npm: https://www.npmjs.com/
 - Parcel: https://parceljs.org/
