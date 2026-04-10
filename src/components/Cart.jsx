@@ -36,7 +36,7 @@ const Cart = () =>
           cartItems.map((item) => 
           (
               <div 
-                key={item.card.info.id}
+                key={item.card.info.id + Math.random()}
                 data-testid="cartItem"
                 className="p-2 m-3 border border-gray-200 border-b-4 text-left flex justify-between">
                       

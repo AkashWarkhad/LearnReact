@@ -7,7 +7,7 @@ const ShimmerLoader = () =>
             <button className="fakeBtn"></button>
             <div className="shimmerLoaderContainer">
                 {
-                Array.from({length: totalFakeCards}).map((_, index)=> 
+                    Array.from({length: totalFakeCards}).map((_, index)=> 
                     {
                         return <div key={index} className="fakeCard"></div>
                     })

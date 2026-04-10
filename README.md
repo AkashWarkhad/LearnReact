@@ -64,8 +64,6 @@ This repository will include implementations and practice examples for the follo
 - Different Bundles for Dev & Prod
 
 
-
-
 ### JSX
 - Introduction to JSX
 - JSX vs `React.createElement`
@@ -85,7 +83,13 @@ This repository will include implementations and practice examples for the follo
 ### React Hooks
 - `useState`
 - `useEffect`
-- Understanding how hooks work
+- `useContext`
+- `useParams`
+- `useRouteError`
+- `useSelector`
+- `useDispatch`
+- `useTransition`
+
 
 ### Advanced Concepts
 - Virtual DOM
@@ -192,4 +196,16 @@ To Run the Project on Production:
 
 ```bash
 npm run build
+```
+
+To Run the Project Tests:
+
+```bash
+npm test
+```
+
+To run test on watch mode then run : 
+
+```bash
+npm run watch-test
 ```

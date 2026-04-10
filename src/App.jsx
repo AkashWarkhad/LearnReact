@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom/client"
 import About from "./components/About";
-import HelloWorld from "./components/HelloWorld";
 import Error from "./components/Error";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -20,7 +19,7 @@ import { Provider } from "react-redux";
 
 /** Comment the above regular import
  * Lazy Loading : Its also called as Chuncking/ Code Splitting/ Dynamic bundling/ On Demand loading/ Dynamic loading */
-const Grocery = lazy(()=> import("./components/Grocery"));
+const Grocery = lazy( () => import("./components/Grocery") );
 
 
 /**
@@ -62,9 +61,9 @@ const AppLayout = () =>
     <Provider store={appStore}>
 
       {/* OutSide the Layout default configured value will be reflected, 
-          Inside the layout useName value will reflect & for Footer section Elon Musk value will be reflects. */}
+          Inside the layout userName value will reflect & for Footer section Elon Musk value will be reflects. */}
 
-      <UserContext.Provider value={ {loggedInUser: userName , setUserName}}>
+      <UserContext.Provider value={ { loggedInUser: userName , setUserName } }>
         <div className="app">
           
           <Header />
@@ -109,7 +108,7 @@ const appRouter = createBrowserRouter(
           
           // Suspense is a React component used to show a fallback UI (like a loader) while a lazy-loaded component is being fetched. It works together with React.lazy for code splitting.
           // When the user navigates to "Grocery", the component is loaded asynchronously in a separate bundle, and Suspense displays the fallback until loading is complete.
-          "element": <Suspense fallback={<h1>Loading...</h1>}> <Grocery /> </Suspense> 
+          "element": <Suspense fallback={ <h1>Loading...</h1> }> <Grocery /> </Suspense> 
         },
         {
           "path": "/cart",
@@ -137,5 +136,6 @@ root.render
   // It enables navigation and rendering of routes based on the current URL.
   <RouterProvider
       future={{ v7_startTransition: true }} // Just to disable the warning from next upcomming version
-      router={appRouter} />
+      router={appRouter} 
+  />
 );

@@ -2,6 +2,34 @@ import { prettyDOM, render, screen } from "@testing-library/react";
 import About from "../../src/components/About";
 import "@testing-library/jest-dom"
 
+
+
+/**
+    ● (Framework) Jest = Test Runner + Assertions Developed by meta/facebook
+        - Run tests
+        - Assertions
+        - Mocking
+        - Coverage reports
+    ● (Library)RTL = UI Testing Tool
+        - Testing UI
+        - DOM querying
+        - Rendering components
+
+In the test we have this comes from
+    ● test() → from Jest
+    ● expect() → from Jest
+    ● render() → from RTL
+    ● screen.getByText() → from RTL
+
+    Jest is a testing framework used to run tests, provide assertions, mocking, and coverage
+    reports, while React Testing Library is a utility used to render components and test UI
+    behavior from the user’s perspective. Jest handles test execution, and React Testing
+    Library helps interact with the DOM. Both are used together to provide a complete testing
+    solution in React applications.
+ */
+
+
+
 // Note : You can use test or it both works
 describe("About Component Test Cases", () => 
 {
@@ -37,7 +65,7 @@ describe("About Component Test Cases", () =>
 
         // Assert
         expect(heading).toBeInTheDocument();
-        expect(heading2).toBeInTheDocument();
+        expect(heading2).toMatchSnapshot();
     });
 
     test("Button should be rendered in the About component", () => 
@@ -68,4 +96,3 @@ describe("About Component Test Cases", () =>
         expect(div).toHaveLength(1);
     });
 });
-

@@ -24,7 +24,7 @@ const About = ()=>
             {show && <HelloWorld />}   {/* ✅ Render conditionally */}
             
         </div>
-    );
+    ); 
 }
-
+ 
 export default About;

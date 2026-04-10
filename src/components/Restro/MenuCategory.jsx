@@ -20,7 +20,7 @@ const MenuCategory = ({data , showItems, setShowIndex}) =>
             </div>
         </div>
     )
-    
+     
 };
 
 export default MenuCategory;

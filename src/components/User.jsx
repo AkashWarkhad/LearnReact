@@ -34,10 +34,12 @@ const User = ({component, location})=>
             <p>Email Address : helpdesk24by7@gamail.com</p>
             <p>Mobile No: {mobNo}</p>
             <h1>User Context in Class Component : <b>"{loggedInUser}"</b></h1>
-            <button onClick={()=> 
+            <button onClick=
+            {()=>
                 {
                     setCount(count + 1);
-                }}>Inc Count {count}</button>
+                }
+            }>Inc Count {count}</button>
         </div>
     );
 }

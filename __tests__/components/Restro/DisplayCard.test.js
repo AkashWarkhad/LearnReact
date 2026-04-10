@@ -14,7 +14,7 @@ it("Should render restaurent card component with props data", () =>
 
     // Assert
     expect(name).toBeInTheDocument();
-});
+}); 
 
 it("Should render RestroCard component with Promoted label", () => 
 {
