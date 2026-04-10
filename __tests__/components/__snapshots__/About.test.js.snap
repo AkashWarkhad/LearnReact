@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`About Component Test Cases About component should load succesfully. 1`] = `
+<h1
+  class="text-center font-bold"
+>
+  This is about React Fundamentals.
+</h1>
+`;

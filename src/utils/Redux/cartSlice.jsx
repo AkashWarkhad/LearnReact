@@ -10,6 +10,7 @@ const cartSlice = createSlice(
     reducers: 
     {
         // Key is name of Action & Value is the corresponding reducer logic.
+        // state : Existing state & action contains the payload
         addItem: (state, action) => 
         {
             // Redux toolkit uses immer library behind the scene to manage this.
@@ -41,9 +42,28 @@ const cartSlice = createSlice(
     //     {
     //         // default logic for handling actions not handled by this slice
     //     });
-    // }
+    // },
+
+    selectors: 
+    {
+        // Correct selector for cart items
+        selectData: (state) => state.cart,
+
+        // Example filtered selector (optional)
+        selectFilteredData: (state, filter) => state.cart.items.filter(item => item.name.includes(filter)),
+    },
+
+    // selectors: (state) => (
+    // {
+    //     selectData: () => state.items, // this selector provides available data
+
+    //     selectFilteredData: (filter) => state.items.filter(item => item.includes(filter)) // Provide filtered data.
+    // }),
 });
 
 // When we create createSlice then cartSlice returns actions & reducer & we can access like below :
 export const { addItem, removeItem, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;
+
+// Exports the selectors
+export const { selectData, selectFilteredData } = cartSlice.selectors;

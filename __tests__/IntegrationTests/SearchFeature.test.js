@@ -5,22 +5,40 @@ import SearchFeatureTestData from "./MockData/SearchFeatureTestData.json"
 import { act } from "react";
 import { BrowserRouter } from "react-router-dom";
 
-global.fetch = jest.fn(()=>
+// This is global fetch which override the existing fecth & return the mocked data from the folder
+// As you can see source code we have to Promises fech & Json so we have 2 promises here in the fn()
+
+// Using Promises
+// global.fetch = jest.fn(()=>
+// {
+//     return Promise.resolve(
+//     {
+//         json : () => 
+//         {
+//             return Promise.resolve(SearchFeatureTestData);
+//         }
+//     });
+// });
+
+// Async Await Modern Approach
+// global.fetch = jest.fn(async () => (
+// {
+//   ok: true,
+//   status: 200,
+//   json: async () => SearchFeatureTestData,
+// }));
+
+global.fetch = jest.fn(async () => 
 {
-    return Promise.resolve(
-    {
-        json : () => 
-        {
-            return Promise.resolve(SearchFeatureTestData);
-        }
-    });
+  return {
+    json: async () => SearchFeatureTestData
+  };
 });
 
 it("Should search for Coffe & render the body component with searched filtered data.", async () => 
 {
     // Arrange
-    // This is global fetch which override the existing fecth & return the mocked data from the folder
-    // As you can see source code we have to Promises fech & Json so we have 2 promises here in the fn()
+    
     await act(async () => 
         render(
             <BrowserRouter>
@@ -75,5 +93,3 @@ it("Should filter top rated restro when cliked filter button.", async () =>
     const restroCardAfterFilter = screen.getAllByTestId("restroCard");
     expect(restroCardAfterFilter).toHaveLength(9);
 });
-
-

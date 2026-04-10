@@ -69,7 +69,7 @@ const HelloWorld = () =>
     
     console.log("######## React Functional Components :");
     
-    // Arrow Function
+    // Arrow Function start with capital letter
     const FuncHeading = () => <h4>## React Functional Component :-</h4>;
     
     const question = "What is a Functional Component in React? :- ";

@@ -6,17 +6,17 @@ const useRestroInfoCustomHook = (resId) =>
 
     useEffect(()=> 
     {
-        try{
-            fetchData();
-        }
-        catch (ex){
-            console.log("Exception :", ex);
-        }
-    }, []);
+        fetchData();
+    }, [resId]);
+
+    // Return the fetched restroInfo data to custom Hook Calller.
+    return restroInfo;
 
     async function fetchData()
     {
-        const data = await fetch(
+        try
+        {
+            const data = await fetch(
             "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.5211&lng=73.8502&restaurantId=" 
             + resId + 
             "434066&catalog_qa=undefined&submitAction=ENTER");
@@ -27,10 +27,14 @@ const useRestroInfoCustomHook = (resId) =>
             var restaurants = json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ?? [];
             console.log("Restro", restaurants);
 
-            setRestroInfo(restaurants);
+            setRestroInfo(restaurants); 
+        }
+        catch (ex)
+        {
+            console.log("Exception :", ex);
+        }
 
-            // Hooks return the Fetch data
-            return restroInfo;
+        //return Cleanup CallBack Function;
     }
 }
 

@@ -12,7 +12,7 @@ const CategoryItems = (itemCards) =>
   {
     console.log(item.card.info.name, "Item added in the Cart");
     
-    // Dispatch an action called addItem with payload, Note addItem action needs to import otherwise you will see error: ReferenceError: addItem is not defined
+    // Dispatch an action called addItem with payload, Note addItem action needs to import otherwise you will see ReferenceError: addItem is not defined
     dispatch(addItem(item));
   }
 

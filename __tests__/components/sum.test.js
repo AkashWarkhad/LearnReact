@@ -7,4 +7,4 @@ test("Sum Function Should Return an Sum Of the Two Numbers", ()=>
 
     // Assert
     expect(result).toBe(7);
-});
+}); 

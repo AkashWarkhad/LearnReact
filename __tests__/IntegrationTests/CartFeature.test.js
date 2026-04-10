@@ -37,7 +37,7 @@ it("Should Add food item in the cart when we add the items from ShowCardData com
         <Provider store={appStore}>
                 <BrowserRouter>
                     <Header />
-                    <ShowCardData />
+                    <ShowCardData /> // Redered multiple component as we want to apply the assertions on them.
                 </BrowserRouter>
         </Provider>
     ));
@@ -83,7 +83,7 @@ it("Should display the food items in the cart when we add them", async () =>
                 <BrowserRouter>
                     <Header />
                     <Cart />
-                    <ShowCardData />
+                    <ShowCardData /> // Redered multiple component as we want to apply the assertions on them.
                 </BrowserRouter>
         </Provider>
     ));

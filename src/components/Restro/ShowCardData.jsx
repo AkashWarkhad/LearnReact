@@ -2,7 +2,7 @@ import ShimmerLoader from "../ShimmerLoader";
 import { menuData } from "../../utils/StaticData/menuMockData";
 import { useParams } from "react-router-dom";
 import useRestroInfoCustomHook from "../../utils/CustomHooks/useRestroInfoCustomHook";
-import { useContext, useState } from "react";
+import { useContext, useState, useTransition } from "react";
 import MenuCategory from "./MenuCategory";
 import UserContext from "../../utils/UserContext";
 
@@ -14,6 +14,10 @@ const ShowCardData = () =>
     const [restro, setRestro] = useState(menuData);
     const [showIndex, setShowIndex] = useState(0);
 
+    //useTransition is used to mark state updates as low priority to keep the UI responsive during heavy rendering.
+    const [isPending, startTransition] = useTransition();
+
+
     // Access the context data everywhere
     const { loggedInUser } = useContext(UserContext);
 
@@ -24,7 +28,6 @@ const ShowCardData = () =>
     const {resId} = useParams();
 
     console.log("useParams data :", resId);
-
 
     /**
      * Due to API call blocked by Swiggy we commented the fetching logic
@@ -38,7 +41,8 @@ const ShowCardData = () =>
     // console.log("restroData", restroData);
 
 
-    if(restro === null){
+    if(restro === null)
+    {
         return <ShimmerLoader />
     }
 
@@ -49,7 +53,6 @@ const ShowCardData = () =>
     //console.log("itemCards", menuCards);
     
     const restroInfo = restro[2]?.card?.card?.info;
-
     
     //Fetching Restro Menu cards with ItemCategory sections
     // NOTE : Data is not visible then just change array number
@@ -65,6 +68,9 @@ const ShowCardData = () =>
 
             <h1 className="text-xl font-bold text-center">Menu</h1>
 
+            {/* // While loading the data isPending is true so Loader will be redered for good user interface */}
+            {isPending && <h3 className="text-center">Loading items...</h3>}
+
             {
                 /*Show the Menu categories Accordion */
                 menuCategories.map((category, index) => 
@@ -75,7 +81,10 @@ const ShowCardData = () =>
                         // Controlled Component
                         showItems={index === showIndex ? true : false}
                         setShowIndex= {()=>{
-                            setShowIndex(index);
+                            startTransition(() => 
+                            {
+                                setShowIndex(index);
+                            })
                         }} 
                     />) 
             }

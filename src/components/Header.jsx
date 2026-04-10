@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/CustomHooks/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
+import { selectData } from "../utils/Redux/cartSlice"; // Explicit selector function
 
 const Header = () => 
 {
@@ -13,8 +14,12 @@ const Header = () =>
   // Set the data in context
   const { loggedInUser } = useContext(UserContext);
 
-  //Subscribing the store using useSelector Hook
+  //Subscribing the store using useSelector Hook.useSelector accepts a callBack Function which itr over store & select required cartSlice Items
   const cartItems = useSelector((store)=> store.cart.items);
+
+  const cartItemsUsingDefinedSelector = useSelector(selectData);
+  console.log("cartItems Using Defined Selector Function: ", cartItemsUsingDefinedSelector);
+
 
   return (
     <div className="flex justify-between border border-amber-200 bg-linear-to-r from-transparent via-amber-50 to-amber-300">
@@ -32,14 +37,16 @@ const Header = () =>
       */}
       <div className="flex items-center">
         <ul className="flex p-2 items-center">
-          <li className="mr-10">Status {onlineStatus ? "🟢" : "🔴"}</li>
-          <li className="mr-10"><Link to="/">Home</Link></li>
-          <li className="mr-10"><Link to="/about">About Us </Link></li>
 
-          <li className="mr-10"><a href="/contact">Contact Us</a></li> {/**Not Use Achor Tag Use Link Component */}
-          <li className="mr-10"><Link to="/grocery">Grocery</Link></li>
+          <li className="mr-10">Status {onlineStatus ? "🟢" : "🔴"}</li>
           
-          <li className="mr-10 text-black"><Link to="/cart">🛒Cart({cartItems.length} items)</Link></li>
+          <li className="mr-10">  <Link to="/">Home</Link>  </li>
+          <li className="mr-10">  <Link to="/about">About Us</Link> </li>
+
+          <li className="mr-10">  <a href="/contact">Contact Us</a> </li> {/**Not Use Achor Tag Use Link Component */}
+          <li className="mr-10">  <Link to="/grocery">Grocery</Link>  </li>
+          
+          <li className="mr-10 text-black"> <Link to="/cart">🛒Cart({cartItems.length} items) </Link></li>
           
           <li className="mr-10">
             <button className="loginBtn" onClick=

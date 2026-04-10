@@ -9,6 +9,6 @@ const Grocery = () =>
         <h1>Grocery Online Store & have lots of child inside the component with <b>{loggedInUser}</b> </h1>
     </div>
   )
-}
+} 
 
 export default Grocery;

@@ -14,7 +14,7 @@ it("Should load header component with login button", () =>
         <BrowserRouter>
             <Provider store={appStore}>
 
-                <UserContext.Provider value={{loggedInUser : "test"}}>
+                <UserContext.Provider value={{ loggedInUser : "test" }}>
                     <Header />
                 </UserContext.Provider>  
 

@@ -1,7 +1,5 @@
 import React from "react";
 import UserContext from "../utils/UserContext";
-import { Form } from "react-router-dom";
-
 
 /**
  * A class-based component is a React component defined using ES6 class syntax.
@@ -14,7 +12,7 @@ class UserClass extends React.Component
     // and any updates must be handled in the parent component using state. 
     constructor(props) 
     {
-        super(props);
+        super(props);   // Make sure calls Parent Ctor first before calling Child Ctor.
         console.log(props);
 
         // Declaration fields in class based component
@@ -26,14 +24,14 @@ class UserClass extends React.Component
             userInfo :{} // Updated data in the ComponentDidMount
         }
 
-        // Not recommened move details under state object if you want to update value as its not posible now.
+        // Not recommened alone, move details field under state object. if you want to update value as its not posible now.
         this.details = "Avail 24 X 7 on Mon to Fri. Sat Sun is Off."
 
         console.log(`${this.props.component} Child *Constructor* called!!`);
     }
 
     // componentDidMount is nothing but the useEffect() Hook Called immediately after a component is mounted. Setting state here will trigger re-rendering.
-    // LifeCycle : Constructor => Render(Child Render: (Parent -> Render -> DidMount)) => Component Did Mount
+    // LifeCycle : Constructor => Render(Child Render: (Child-Ctor -> Child-Render -> Child-DidMount)) => {Parent-ComponentDidMount
     async componentDidMount()
     {
         console.log(`${this.props.component} Child *ComponentDidMount* Called`);
@@ -44,15 +42,20 @@ class UserClass extends React.Component
         console.log(json);
 
         // Update the userInfo with Api output
-        this.setState({ userInfo: json });
+        this.setState(
+            { 
+                userInfo: json,
+                mobNo: "5784**83**8"
+            });
 
-        // This Calls every 1 second & stored in the timer so later on we can clear the setInterval
+        // This Calls every 1 second & we stored the setInterval under the timer so later on we can clear the setInterval
         this.timer = setInterval(()=> 
         {
             console.log("DidMount Called");
         }, 1000);
     }
 
+    // Called immediately after updating occurs. Not called for the initial render.
     componentDidUpdate(prevProps, prevState)
     {
         // This is for State values updates
@@ -83,7 +86,6 @@ class UserClass extends React.Component
         console.log(`${this.props.component} Child *ComponentWillUnmount* Called!!`);
         clearInterval(this.timer);
     }
-    
 
     render()
     {
@@ -103,7 +105,7 @@ class UserClass extends React.Component
 
             {/* Consume loggedInUser using useContext in ClassBasedComponent.*/}
             <UserContext.Consumer>
-                    {(data)=> <h1>User Context in Class Component : <b>"{data.loggedInUser}"</b></h1>}
+                    { (data) => <h1>User Context in Class Component : <b>"{data.loggedInUser}"</b></h1>}
             </UserContext.Consumer>
 
             <button onClick={()=>

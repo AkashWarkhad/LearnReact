@@ -34,5 +34,4 @@ class ContactUsClass extends Component
   }
 }
 
-
 export default ContactUsClass;
